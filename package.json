@@ -2,6 +2,12 @@
   "name": "ostmono",
   "version": "1.0.0",
   "description": "",
+    "workspaces": [
+      "@local/apps/*",
+      "@local/cdk/*",
+      "@local/lambdas/*",
+      "@local/packages/*"
+    ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
