@@ -1,28 +1,16 @@
 {
-  "name": "lambdas-webpack",
+  "name": "@local/lambdas",
   "private": true,
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "bundle": "webpack",
-    "zip:lambda": "cd dist/${LAMBDA} && zip index.zip index.js",
-    "zip:all": "LAMBDA=lambda-a npm run zip:lambda && LAMBDA=lambda-b npm run zip:lambda",
-    "update:lambda": "aws lambda update-function-code --function-name ${LAMBDA} --zip-file fileb://dist/${LAMBDA}/index.zip --no-cli-pager",
-    "update:all": "LAMBDA=lambda-a npm run update:lambda && LAMBDA=lambda-b npm run update:lambda",
-    "deploy:lambda": "npm run bundle && npm run zip:lambda && npm run update:lambda",
-    "deploy:all": "npm run bundle && npm run zip:all && npm run update:all"
+    "bundle": "webpack"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.84",
-    "@types/jest": "^27.0.2",
-    "@types/node": "^16.11.6",
     "@types/ramda": "^0.27.46",
     "clean-webpack-plugin": "^4.0.0",
-    "jest": "^27.3.1",
-    "prettier": "^2.4.1",
-    "ts-jest": "^27.0.7",
     "ts-loader": "^9.2.6",
-    "typescript": "^4.4.4",
     "webpack": "^5.60.0",
     "webpack-cli": "^4.9.1"
   },

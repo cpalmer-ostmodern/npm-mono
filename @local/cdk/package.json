@@ -1,0 +1,22 @@
+{
+  "name": "@local/cdk",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "bootstrap": "cdk bootstrap aws://$npm_config_aws_accnt/$npm_config_aws_region",
+    "deploy": "cdk deploy --require-approval never",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "aws-cdk": "2.63.1",
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.63.1",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  }
+}
