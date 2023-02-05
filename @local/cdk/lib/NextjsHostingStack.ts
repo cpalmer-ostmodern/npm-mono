@@ -68,10 +68,10 @@ export class AmplifyHostingStack extends Stack {
     });
 
     //Drop down to L1 to allow new NextJS architecture
-    const cfnAmplifyApp = amplifyApp.node.defaultChild as CfnApp;
-    cfnAmplifyApp.platform = "WEB_COMPUTE";
-    new CfnOutput(this, "appId", {
-      value: amplifyApp.appId,
-    });
+    // const cfnAmplifyApp = amplifyApp.node.defaultChild as CfnApp;
+    // cfnAmplifyApp.platform = "WEB_COMPUTE";
+    // new CfnOutput(this, "appId", {
+    //   value: amplifyApp.appId,
+    // });
   }
 }
