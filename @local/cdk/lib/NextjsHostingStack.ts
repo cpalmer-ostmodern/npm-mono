@@ -49,7 +49,7 @@ export class AmplifyHostingStack extends Stack {
               commands: ["npm i"],
             },
             build: {
-              commands: ["npm run build -w @apps/hia/website"],
+              commands: ["npm run build"],
             },
           },
           artifacts: {
@@ -59,6 +59,7 @@ export class AmplifyHostingStack extends Stack {
           cache: {
             paths: ["node_modules/**/*"],
           },
+          appRoot: ["src"],
         },
       }),
     });
