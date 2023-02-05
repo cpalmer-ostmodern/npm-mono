@@ -1,9 +1,9 @@
 {
-  "back-to-home": "Zurück zur Hauptseite",
-  "counter_one": "eines ausgewählt",
-  "counter_other": "{{count}} ausgewählt",
-  "counter_zero": "keines ausgewählt",
-  "h1": "Eine client Seite, um das client-seitige i18n zu demonstrieren",
-  "title": "Client Seite",
-  "to-second-client-page": "zur zweiten client Seite"
+  "back-to-home": "العودة إلى المنزل",
+  "counter_one": "واحد محدد",
+  "counter_other": "{{count}} المحدد",
+  "counter_zero": "لا شيء محدد",
+  "h1": "صفحة عميل لتوضيح جانب العميل i18n",
+  "title": "صفحة العميل",
+  "to-second-client-page": "إلى صفحة العميل الثانية"
 }
