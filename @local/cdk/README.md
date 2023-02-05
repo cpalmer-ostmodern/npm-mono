@@ -11,35 +11,36 @@ If one doesn't exist then just simply create one
 
 then add your information under a new profile
 
-```terminal
+````terminal
 [example]
 aws_access_key_id=************
 aws_secret_access_key=***********************************
 
 (You may need to setup an IAM role in the management console first and then using the access key and secret access key append your credentials file)
 
-You can test your cli is working with the following command: 
+You can test your cli is working with the following command:
 
 ```terminal
 aws sts get-caller-identity
-```
+````
 
-you should see something like this: 
+you should see something like this:
 
 ```json
 {
-    "UserId": "************",
-    "Account": "***********",
-    "Arn": "arn:aws:iam::*************:user/your.name@ostmodern.co.uk"
+  "UserId": "************",
+  "Account": "***********",
+  "Arn": "arn:aws:iam::*************:user/your.name@ostmodern.co.uk"
 }
 ```
+
 ## Bootstrap
 
 To Bootstrap your cdk with your aws account run from the terminal the following command with your accnt number and region using the aws_accnt and aws_region flags
 
- - check your IAM permissions are set to include cloudformation
+- check your IAM permissions are set to include cloudformation
 
-you can fetch your default region using this command: 
+you can fetch your default region using this command:
 
 ```terminal
 aws configure get region
@@ -49,30 +50,37 @@ aws configure get region
 npm run bootstrap -w @local/cdk --aws_accnt=************ --aws_region=**-****-*
 ```
 
- If you get this warning: 
+If you get this warning:
 
- ```terminal
- User: arn:aws:iam::**************:user/example is not authorized to perform: ssm:PutParameter on resource: arn:aws:ssm:eu-west-1:**********:parameter/cdk-bootstrap/hnb659fds/version because no
+```terminal
+User: arn:aws:iam::**************:user/example is not authorized to perform: ssm:PutParameter on resource: arn:aws:ssm:eu-west-1:**********:parameter/cdk-bootstrap/hnb659fds/version because no
 identity-based policy allows the ssm:PutParameter action (Service: AmazonSSM; Status Code: 400; Error Code: AccessDeniedException; Request ID: *******-****-****-****-************; Proxy: null)
 ```
 
-Then you may need to re-check your permissions allocated to include ssm:PutParameter 
+Then you may need to re-check your permissions allocated to include ssm:PutParameter
 
 ## Deploy
 
-to deploy run from the root: 
+to deploy run from the root:
 
 ```terminal
 npm run deploy -w @local/cdk
 ```
 
+You will probably get this error:
+
+Since this app includes more than a single stack, specify which stacks to use (wildcards are supported) or specify `--all`
+Stacks: ...
+
+You should be able to see the list of Stacks available and name the stacks you want to deploy individually or sepcify --all
+
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 ## Other (possibly) Useful commands
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+- `npm run build` compile typescript to js
+- `npm run watch` watch for changes and compile
+- `npm run test` perform the jest unit tests
+- `cdk deploy` deploy this stack to your default AWS account/region
+- `cdk diff` compare deployed stack with current state
+- `cdk synth` emits the synthesized CloudFormation template

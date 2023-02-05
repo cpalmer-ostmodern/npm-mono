@@ -25,7 +25,7 @@ export class AmplifyHostingStack extends Stack {
         owner: "cpalmer-ostmodern",
         repository: "npm-mono",
         oauthToken: SecretValue.unsafePlainText(
-          "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"
+          "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"
         ) as any,
       }),
       autoBranchCreation: {
