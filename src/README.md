@@ -1,37 +1,14 @@
-# Example app with next-sass
+# Next.js 13 app directory feature in combination with i18next
 
-This example demonstrates how to use Next.js' built-in Global Sass/Scss imports and Component-Level Sass/Scss modules support.
+This example shows a basic way to use [i18next](https://www.i18next.com) (and [react-i18next](https://react.i18next.com)) in a [Next.js 13](https://beta.nextjs.org/) app with the new app directory features.
+[next-i18next](https://next.i18next.com) is not needed anymore for this setup.
 
-## Preview
+It shows i18next integration on some server side pages and some client side pages.
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+There is also an example middleware with language detection and persistence via cookie.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-next-sass)
+*This example has been created out of [this discussion](https://github.com/i18next/next-i18next/discussions/1993).*
 
-## Deploy your own
+## There's also a [blog post](https://locize.com/blog/next-13-app-dir-i18n) describing this with more detail information.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-next-sass&project-name=with-next-sass&repository-name=with-next-sass)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-next-sass with-next-sass-app
-# or
-yarn create next-app --example with-next-sass with-next-sass-app
-```
-
-Run production build with:
-
-```bash
-npm run build
-npm run start
-# or
-yarn build
-yarn start
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+[![](https://locize.com/blog/next-13-app-dir-i18n/next-13-app-dir-i18n.jpg)](https://locize.com/blog/next-13-app-dir-i18n)
