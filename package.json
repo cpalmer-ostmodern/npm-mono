@@ -15,7 +15,7 @@
     "deploy:cdk": "npm run build && npm run deploy -w @local/cdk",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "cd apps/hia/website && next start"
   },
   "devDependencies": {
     "@types/jest": "^29.4.0",
