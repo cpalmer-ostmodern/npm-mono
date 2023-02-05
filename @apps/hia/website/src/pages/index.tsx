@@ -3,9 +3,15 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@hia/website/styles/Home.module.css";
 
+import { getCMS } from "@local/client";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  let data = getCMS();
+
+  console.log(data);
+
   return (
     <>
       <Head>
