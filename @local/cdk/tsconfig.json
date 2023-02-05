@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "resolveJsonModule": true,
     "declaration": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -11,5 +12,11 @@
     "experimentalDecorators": true,
     "strictPropertyInitialization": false
   },
-  "exclude": ["node_modules", "cdk.out"]
+  "include": [
+    "bin/**/*",
+    "lib/**/*",
+    "test/**/*",
+    "dist/**/*",
+    "dist/**/*.json"
+  ]
 }

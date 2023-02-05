@@ -6,5 +6,5 @@ export const createResponse = (
   name: string
 ): APIGatewayProxyResult => ({
   statusCode: code,
-  body: `Hello ${toUpper(name)}`,
+  body: `This is ${toUpper(name)}`,
 });

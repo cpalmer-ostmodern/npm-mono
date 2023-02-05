@@ -2,9 +2,10 @@
   "name": "@local/cdk",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/main.js",
   "scripts": {
     "bootstrap": "cdk bootstrap aws://$npm_config_aws_accnt/$npm_config_aws_region",
-    "deploy": "cdk deploy --require-approval never",
+    "deploy": "cdk deploy --require-approval never --outputs-file dist/output.json",
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
