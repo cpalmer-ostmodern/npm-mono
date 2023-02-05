@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "workspaces": [
-    "apps/**/*",
+    "website",
     "@local/cdk",
     "@local/client",
     "@local/lambdas"
@@ -15,7 +15,7 @@
     "deploy:cdk": "npm run build && npm run deploy -w @local/cdk",
     "dev": "next dev",
     "build": "next build",
-    "start": "cd apps/hia/website && next start"
+    "start": "next start"
   },
   "devDependencies": {
     "@types/jest": "^29.4.0",
