@@ -1,48 +1,3 @@
-
-
-
-
-## NPM Workspaces
-You may use this workspace root folder in order to run an arbitrary command from a package's "scripts" object in the context of the specified workspaces. If no "command" is provided, it will list the available scripts for each of these configured workspaces.
-
-Given a project with configured workspaces, e.g:
-
- 
-.
-+-- package.json
-`-- packages
-   +-- a
-   |   `-- package.json
-   +-- b
-   |   `-- package.json
-   `-- c
-       `-- package.json
-
-Assuming the workspace configuration is properly set up at the root level package.json file. e.g:
-
- 
-{
-    "workspaces": [ "./packages/*" ]
-}
-And that each of the configured workspaces has a configured test script, we can run tests in all of them using the workspaces config:
-
- 
-npm test --workspaces
-Filtering workspaces
-It's also possible to run a script in a single workspace using the workspace config along with a name or directory path:
-
- 
-npm test --workspace=a
-The workspace config can also be specified multiple times in order to run a specific script in the context of multiple workspaces. When defining values for the workspace config in the command line, it also possible to use -w as a shorthand, e.g:
-
- 
-npm test -w a -w b
-This last command will run test in both ./packages/a and ./packages/b packages.
-
-https://docs.npmjs.com/cli/v9/commands/npm-run-script
-
-
-
 ## AWS CDK
 
 To setup your aws cdk, first install the aws-cli globally on your machine:
@@ -78,7 +33,7 @@ you should see something like this:
     "Arn": "arn:aws:iam::*************:user/your.name@ostmodern.co.uk"
 }
 ```
-
+## Bootstrap
 
 To Bootstrap your cdk with your aws account run from the terminal the following command with your accnt number and region using the aws_accnt and aws_region flags
 
@@ -98,9 +53,12 @@ npm run bootstrap -w @local/cdk --aws_accnt=************ --aws_region=**-****-*
 
  ```terminal
  User: arn:aws:iam::**************:user/example is not authorized to perform: ssm:PutParameter on resource: arn:aws:ssm:eu-west-1:**********:parameter/cdk-bootstrap/hnb659fds/version because no
-identity-based policy allows the ssm:PutParameter action (Service: AmazonSSM; Status Code: 400; Error Code: AccessDeniedException; Request ID: *******-****-****-****-************; Proxy: null)```
+identity-based policy allows the ssm:PutParameter action (Service: AmazonSSM; Status Code: 400; Error Code: AccessDeniedException; Request ID: *******-****-****-****-************; Proxy: null)
+```
 
 Then you may need to re-check your permissions allocated to include ssm:PutParameter 
+
+## Deploy
 
 to deploy run from the root: 
 
@@ -108,4 +66,13 @@ to deploy run from the root:
 npm run deploy -w @local/cdk
 ```
 
+The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
+## Other (possibly) Useful commands
+
+* `npm run build`   compile typescript to js
+* `npm run watch`   watch for changes and compile
+* `npm run test`    perform the jest unit tests
+* `cdk deploy`      deploy this stack to your default AWS account/region
+* `cdk diff`        compare deployed stack with current state
+* `cdk synth`       emits the synthesized CloudFormation template
