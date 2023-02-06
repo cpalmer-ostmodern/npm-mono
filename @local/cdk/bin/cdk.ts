@@ -44,6 +44,7 @@ new AmplifyHostingStack(app, "NextJsApp", {
   // swap for your github frontend repo
   repository: "npm-monorepo",
   //pass in any envVars from the above stacks here
+
   environmentVariables: {
     USERPOOL_ID: authStack.userpool.userPoolId,
     GRAPHQL_URL: apiStack.graphqlURL,
