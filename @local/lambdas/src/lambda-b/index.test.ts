@@ -1,8 +1,8 @@
 import { handler } from "./index";
 
 describe("handler", () => {
-  it('should return "Hello MARIA"', async () => {
+  it('should return "This is UMS"', async () => {
     const response = await handler();
-    expect(response.body).toBe("Hello MARIA");
+    expect(response.body).toBe("This is UMS");
   });
 });
