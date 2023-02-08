@@ -6,10 +6,8 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer/client";
 import { useState } from "react";
 
-import { TopicButton } from "srmg-dev-ui-001";
-
 export default function Page({ params: { lng } }) {
-  const { t } = useTranslation(lng, "client-page");
+  const { t } = useTranslation(lng, "home-page");
   const [counter, setCounter] = useState(0);
   return (
     <>
@@ -23,7 +21,6 @@ export default function Page({ params: { lng } }) {
           <button onClick={() => setCounter(Math.min(10, counter + 1))}>
             +
           </button>
-          <TopicButton></TopicButton>
         </div>
         <Link href={`/${lng}/second-client-page`}>
           {t("to-second-client-page")}

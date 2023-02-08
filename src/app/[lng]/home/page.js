@@ -11,6 +11,12 @@ import {
   MediaGrid,
 } from "srmg-dev-ui-001";
 
+import {
+  articles,
+  articles_7,
+  media_articles,
+} from "../../../data/sample-articles";
+
 export default function Page({ params: { lng } }) {
   const { t } = useTranslation(lng, "client-page");
 
