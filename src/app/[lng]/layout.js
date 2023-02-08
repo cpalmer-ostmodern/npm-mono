@@ -1,18 +1,20 @@
 "use client";
+
 import "./global.css";
 
-import { dir } from "i18next";
-import { languages } from "../i18n/settings";
+// import { dir } from "i18next";
+// import { languages } from "../i18n/settings";
 
-export async function generateStaticParams() {
-  return languages.map((lng) => ({ lng }));
-}
+// export async function generateStaticParams() {
+//   return languages.map((lng) => ({ lng }));
+// }
 
-export default function RootLayout({ children, params: { lng } }) {
+export default function RootLayout({ params: { lng } }) {
   return (
-    <html lang={lng} dir={dir(lng)}>
+    // <html lang={lng} dir={dir(lng)}>
+    <html>
       <head />
-      <body>{children}</body>
+      <body></body>
     </html>
   );
 }

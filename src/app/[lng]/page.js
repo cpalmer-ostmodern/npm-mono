@@ -3,14 +3,13 @@ import { languages, fallbackLng } from "../i18n/settings";
 import { useTranslation } from "../i18n";
 import { Footer } from "./components/Footer";
 
-export default async function Page({ params: { lng, children } }) {
+export default async function Page({ params: { lng } }) {
   if (languages.indexOf(lng) < 0) lng = fallbackLng;
   const { t } = await useTranslation(lng);
 
   return (
     <>
       <main>
-        {children}
         <h2></h2>
         <div style={{ width: "100%" }}>
           <p></p>
