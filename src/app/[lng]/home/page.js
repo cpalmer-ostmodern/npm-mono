@@ -1,6 +1,6 @@
 "use client";
 
-// import { useTranslation } from "../../i18n/client";
+import { useTranslation } from "../../i18n/home";
 import { Footer } from "../components/Footer/client";
 import { useState } from "react";
 
@@ -12,7 +12,7 @@ import {
 } from "srmg-dev-ui-001";
 
 export default function Page({ params: { lng } }) {
-  // const { t } = useTranslation(lng, "client-page");
+  const { t } = useTranslation(lng, "client-page");
 
   const [counter, setCounter] = useState(0);
 
