@@ -1,8 +1,6 @@
-import Link from "next/link";
-import { Trans } from "react-i18next/TransWithoutContext";
+"use client";
 import { languages, fallbackLng } from "../i18n/settings";
 import { useTranslation } from "../i18n";
-import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 
 export default async function Page({ params: { lng, children } }) {
@@ -12,20 +10,10 @@ export default async function Page({ params: { lng, children } }) {
   return (
     <>
       <main>
-        <Header heading={t("h1")} />
         {children}
-        <h2>
-          <Trans t={t} i18nKey="welcome">
-            Welcome to Next.js v13 <small>appDir</small> and i18next
-          </Trans>
-        </h2>
+        <h2></h2>
         <div style={{ width: "100%" }}>
-          <p>
-            <Trans t={t} i18nKey="blog.text">
-              Check out the corresponding <a href={t("blog.link")}>blog post</a>{" "}
-              describing this example.
-            </Trans>
-          </p>
+          <p></p>
           <a href={t("blog.link")}>
             <img
               style={{ width: "50%" }}
@@ -34,14 +22,7 @@ export default async function Page({ params: { lng, children } }) {
           </a>
         </div>
         <hr style={{ marginTop: 20, width: "90%" }} />
-        <div>
-          <Link href={`/${lng}/second-page`}>
-            <button type="button">{t("to-second-page")}</button>
-          </Link>
-          <Link href={`/${lng}/client-page`}>
-            <button type="button">{t("to-client-page")}</button>
-          </Link>
-        </div>
+        <div></div>
       </main>
       <Footer lng={lng} />
     </>

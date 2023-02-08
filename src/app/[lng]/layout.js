@@ -1,3 +1,4 @@
+"use client";
 import "./global.css";
 
 import { dir } from "i18next";
