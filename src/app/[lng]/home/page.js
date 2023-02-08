@@ -1,8 +1,6 @@
 "use client";
 
-import Link from "next/link";
 import { useTranslation } from "../../i18n/client";
-import { Header } from "../components/Header";
 import { Footer } from "../components/Footer/client";
 import { useState } from "react";
 
