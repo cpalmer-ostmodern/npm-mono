@@ -16,6 +16,11 @@ export default function Page({ params: { lng } }) {
 
   const [counter, setCounter] = useState(0);
 
+  const imgCaption = {
+    title: "اخترنا لكم",
+    body: "Luminous Fantasy روعة البدايات الجديدة مع Van Cleef & Arpels",
+  };
+
   return (
     <>
       <main>
