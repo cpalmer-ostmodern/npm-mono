@@ -12,11 +12,11 @@ export const config = {
 const cookieName = "i18next";
 
 export function middleware(req) {
-  const url = req.nextUrl.clone();
-  if (url.pathname === "/en" || url.pathname === "/ar") {
-    url.pathname = "/home";
-    return NextResponse.redirect(url);
-  }
+  // const url = req.nextUrl.clone();
+  // if (url.pathname === "/en" || url.pathname === "/ar") {
+  //   url.pathname = "/home";
+  //   return NextResponse.redirect(url);
+  // }
   if (
     req.nextUrl.pathname.indexOf("icon") > -1 ||
     req.nextUrl.pathname.indexOf("chrome") > -1
