@@ -4,12 +4,12 @@
   "description": "",
   "private": true,
   "workspaces": [
-    "website",
     "@local/*"
   ],
   "scripts": {
     "prepare": "husky install",
     "compile": "tsc -b tsconfig.build.json",
+    "pre-commit": "npm run lint && npm run test",
     "build:cdk": "npm run bundle -w @local/lambdas && npm run build -w @local/cdk",
     "deploy:cdk": "npm run build && npm run deploy -w @local/cdk",
     "test": "npm test -w *",

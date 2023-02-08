@@ -13,6 +13,4 @@ then
     exit 1
 fi
 
-npm test -w *
-
 exit 0
