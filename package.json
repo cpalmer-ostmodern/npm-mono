@@ -4,8 +4,7 @@
   "description": "",
   "private": true,
   "workspaces": [
-    "@local/*",
-    "src"
+    "@local/*"
   ],
   "scripts": {
     "compile": "tsc -b tsconfig.build.json",
