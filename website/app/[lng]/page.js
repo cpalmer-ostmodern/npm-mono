@@ -5,7 +5,7 @@ import { useTranslation } from "../i18n";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 
-export default async function Page({ params: { lng } }) {
+export default async function Page({ params: { lng, children } }) {
   if (languages.indexOf(lng) < 0) lng = fallbackLng;
   const { t } = await useTranslation(lng);
 
@@ -13,6 +13,7 @@ export default async function Page({ params: { lng } }) {
     <>
       <main>
         <Header heading={t("h1")} />
+        {children}
         <h2>
           <Trans t={t} i18nKey="welcome">
             Welcome to Next.js v13 <small>appDir</small> and i18next
