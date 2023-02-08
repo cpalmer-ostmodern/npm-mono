@@ -23,6 +23,8 @@
     "srmg-dev-ui-001": "^0.1.17"
   },
   "devDependencies": {
-    "locize-cli": "7.13.1"
+    "@types/node": "^18.13.0",
+    "locize-cli": "7.13.1",
+    "typescript": "^4.9.5"
   }
 }
