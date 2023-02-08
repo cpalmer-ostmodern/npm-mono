@@ -8,7 +8,6 @@
     "src"
   ],
   "scripts": {
-    "prepare": "husky install",
     "compile": "tsc -b tsconfig.build.json",
     "pre-commit": "npm run test",
     "build:cdk": "npm run bundle -w @local/lambdas && npm run build -w @local/cdk",
