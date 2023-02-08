@@ -107,11 +107,16 @@ export default function Page({
           >
             {/* <div className="fixed">{scrollY}</div> */}
             <NavBar
-              sSize={'23px'}
               logoSize={
-                scrollY === 0 ? 72 : 56
+                scrollY === 0
+                  ? [72, 144]
+                  : [56, 110]
               }
-              logoTxt
+              logoTw={
+                scrollY === 0
+                  ? `mb-[2rem] -mt-[2rem]`
+                  : `-mt-[2rem] mb-0`
+              }
               tw="relative pl-7 pr-5 pt-3 pb-4 md:pt-4 md:px-10 md:pb-5 bg-white lg:px-20 flex justify-between w-100 sticky"
               twMenuOverlay="-z-10 p-5 bg-gold-500 min-h-screen flex justify-center items-center absolute left-0 top-0 w-full"
               twSearchOverlay="-z-10 p-5 bg-neutral-400 min-h-screen flex justify-center items-center absolute left-0 top-0 w-full"
@@ -141,15 +146,19 @@ export default function Page({
           />
         </section>
 
-        <section className="mb-16">
+        <section className="mb-16 text-center">
           <ImageCarousel
             width={'100%'}
-            height={'auto'}
-            gap={'3rem'}
+            height={'50%'}
+            gap={'5rem'}
+            columns={12}
             articles={articles_7}
             twCarouselContainer={
-              'col-span-9'
+              'col-span-9 h-90'
             }
+            twArticleImg="w-full overflow-hidden p-5"
+            twArticleTitle="text-xl font-primary font-medium text-right mt-4"
+            twArticleCategory="mt-4 text-right text-sm font-tertiary"
           ></ImageCarousel>
         </section>
 

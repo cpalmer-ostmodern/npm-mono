@@ -21,8 +21,8 @@ export function Logo({ color = 'black', size, hasText = true, tw }: LogoProps) {
           height={size ? size[1] : 72}
           viewBox="0 0 172 172"
           style={{
-            minWidth: size ? size[0] : 72,
-            minHeight: size ? size[1] : 72,
+            minWidth: size && size[0] ? size[0] : 72,
+            minHeight: size && size[1] ? size[1] : 144,
           }}
         ></HiaLogoText>
       ) : (
@@ -33,8 +33,8 @@ export function Logo({ color = 'black', size, hasText = true, tw }: LogoProps) {
           height={size ? size[1] : 72}
           viewBox="0 0 172 172"
           style={{
-            minWidth: size ? size[0] : 72,
-            minHeight: size ? size[1] : 72,
+            minWidth: size && size[0] ? size[0] : 72,
+            minHeight: size && size[1] ? size[1] : 144,
           }}
         ></HiaLogo>
       )}

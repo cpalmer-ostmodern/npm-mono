@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { TopicButton } from "../../atoms/button";
-import { Overlay } from "../../atoms/overlay/overlay.component";
-import { Input } from "../../atoms/input/input.component";
+import React, { useState } from 'react';
+import { TopicButton } from '../../atoms/button';
+import { Overlay } from '../../atoms/overlay/overlay.component';
+import { Input } from '../../atoms/input/input.component';
 
 /* eslint-disable-next-line */
 export interface SearchProps {
@@ -26,7 +26,7 @@ export function SearchToggle({ twSearchOverlay }: SearchProps) {
         aria-label="Menu toggle"
         aria-haspopup="true"
         aria-expanded={menuActive}
-        icon={menuActive ? "icon icon-cross" : "icon icon-magnifier"}
+        icon={menuActive ? 'icon icon-cross' : 'icon icon-magnifier'}
         size="28px"
       ></TopicButton>
 

@@ -1,6 +1,6 @@
-import React from "react";
-import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
-import { Article } from "../../molecules/article";
+import React from 'react';
+import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
+import { Article } from '../../molecules/article';
 
 export function ImageCarousel({
   width,
@@ -15,7 +15,7 @@ export function ImageCarousel({
   twArticleCategory,
 }: any) {
   const setImageOrientation = (index: number) => {
-    return index % 2 ? "portrait" : "square";
+    return index % 2 ? 'portrait' : 'square';
   };
   return (
     <section className="!mt-60">
@@ -30,8 +30,8 @@ export function ImageCarousel({
             aria-labelledby="chosen-articles"
             options={{
               arrowPath:
-                "M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z",
-              perPage: 2,
+                'M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z',
+              perPage: 3,
               perMove: 1,
               height: height,
               width: width,
