@@ -1,6 +1,6 @@
-import Logo from "../../atoms/logo/logo.component";
-import { Menu } from "../../molecules/menu/menu";
-import SearchToggle from "../../molecules/search-toggle/search-toggle";
+import Logo from '../../atoms/logo/logo.component';
+import { Menu } from '../../molecules/menu/menu';
+import SearchToggle from '../../molecules/search-toggle/search-toggle';
 
 /* eslint-disable-next-line */
 export interface NavBarProps {
@@ -9,9 +9,9 @@ export interface NavBarProps {
   icon?: boolean;
   menu?: boolean;
   links?: string[];
-  sSize: string;
+  logoTw?: string;
   logoTxt?: boolean;
-  logoSize?: number;
+  logoSize?: number[];
   tw?: string;
   twSearchOverlay?: string;
   twMenuOverlay?: string;
@@ -19,7 +19,7 @@ export interface NavBarProps {
 
 export function NavBar({
   tw,
-  sSize,
+  logoTw,
   logoTxt,
   logoSize,
   twMenuOverlay,
@@ -28,7 +28,7 @@ export function NavBar({
   return (
     <nav className={tw}>
       <SearchToggle twSearchOverlay={twSearchOverlay} />
-      <Logo hasText={logoTxt} size={logoSize}></Logo>
+      <Logo tw={logoTw} hasText={logoTxt} size={logoSize}></Logo>
       <Menu twMenuOverlay={twMenuOverlay}></Menu>
     </nav>
   );

@@ -1,11 +1,11 @@
-import React from "react";
-import { render } from "@testing-library/react";
+import React from 'react';
+import { render } from '@testing-library/react';
 
-import NavBar from "./nav-bar.component";
+import NavBar from './nav-bar.component';
 
-describe("NavBar", () => {
-  it("should render successfully", () => {
-    const { baseElement } = render(<NavBar sSize={""} />);
+describe('NavBar', () => {
+  it('should render successfully', () => {
+    const { baseElement } = render(<NavBar logoTw={''} />);
     expect(baseElement).toBeTruthy();
   });
 });

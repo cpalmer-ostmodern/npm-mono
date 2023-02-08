@@ -4,7 +4,8 @@
   "description": "",
   "private": true,
   "workspaces": [
-    "@local/*"
+    "@local/*",
+    "src"
   ],
   "scripts": {
     "prepare": "husky install",
