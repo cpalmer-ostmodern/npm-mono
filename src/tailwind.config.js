@@ -21,6 +21,7 @@ module.exports = {
       },
       width: {
         480: "30rem",
+      },
       colors: {
         grey: {
           100: "#9ea0a2",
