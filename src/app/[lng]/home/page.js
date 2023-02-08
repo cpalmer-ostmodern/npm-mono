@@ -24,6 +24,13 @@ export default function Page({ params: { lng } }) {
   return (
     <>
       <main>
+        <section>
+          <Header heading={t("h1")} />
+        </section>
+
+        <section>
+          <div className="md:h-48 h-[10vh] w-full"></div>
+        </section>
         <section className="relative">
           <ImageBanner
             title={imgCaption.title}
@@ -36,6 +43,68 @@ export default function Page({ params: { lng } }) {
             mobileImg="https://static.hiamag.com/styles/375x471/public/2023-01/MAIN%20MOBILE.jpg?h=827069f2&itok=JVtZQfy8"
             media="(min-width: 769px)"
             twImg="md:h-[69vh] w-full h-[61.5vh] object-cover object-top"
+          />
+        </section>
+
+        {/* <section className="mb-16">
+          <ImageCarousel
+            width={"100%"}
+            height={"100%"}
+            gap={3}
+            articles={articles_7}
+            twCarouselContainer={"col-span-12"}
+          ></ImageCarousel>
+        </section> */}
+
+        <section className="max-w-container px-6 xl:mx-auto mb-24">
+          <ArticleGrid
+            articles={articles}
+            columns={4}
+            buttonText="المزيد"
+            twArticleGrid="flex grid grid-cols-1 md:grid-cols-4 gap-12"
+            twArticle=""
+            twArticleImg="w-full overflow-hidden"
+            twArticleButtonBx="flex justify-center mt-14"
+            twArticleButton="p-2 bg-white border font-tertiary border-black flex justify-between w-60 md:w-1/5"
+            twArticleTitle="text-xl font-primary font-medium text-right mt-4"
+            twArticleCategory="mt-4 text-right text-sm font-tertiary"
+          />
+        </section>
+        <section className="max-w-container px-6 xl:mx-auto mb-16">
+          <ArticleGridWithTitle
+            title="لايف ستايل"
+            titleLink=""
+            articles={articles_7}
+            columns={4}
+            buttonText="المزيد"
+            titleRightAligned
+            twArticle=""
+            twGridTitle="w-full text-right text-5xl lg:text-6xl xl:text-8xl font-bold font-primary text-neutral-400 mb-8"
+            twArticleGrid="flex-row-reverse grid gap-9 overflow-scroll md:overflow-hidden md:flex-row md:gap-12 max-md:flex"
+            twArticleImg="w-full overflow-hidden"
+            twArticleButtonBx="flex justify-center mt-14"
+            twArticleButton="p-2 bg-white border font-tertiary border-black flex justify-between w-60 md:w-1/5"
+            twArticleTitle="text-xl font-primary font-medium text-right mt-4"
+            twArticleCategory="mt-4 text-right text-sm font-tertiary"
+          />
+        </section>
+        <section className="mb-16">
+          <MediaGrid
+            title="بودكاست"
+            titleLink=""
+            articles={media_articles}
+            columns={3}
+            buttonText="المزيد"
+            twMediaBackground="bg-stone-200 py-10 lg:py-24"
+            twMediaGridWrapper="xl:container px-6 xl:px-10 xl:mx-auto"
+            twMediaTitle="w-full text-right text-5xl lg:text-9xl font-bold font-primary mt-4 md:mt-0 mb-14 text-neutral-800"
+            twMediaItemGrid="grid grid-cols-1 gap-12"
+            twMediaImage="w-full overflow-hidden aspect-square"
+            twMediaItemTitle="text-2xl font-primary text-right mt-4"
+            twMediaButton="p-2 border border-black flex justify-between w-60 md:w-1/5 font-tertiary"
+            twMediaButtonWrapper="flex justify-center mt-14"
+            twMediaMetaWrapper="flex justify-end text-base font-body mt-4"
+            twMediaMetaDivider="relative after:content-['◆'] after:bg-no-repeat after:absolute after:w-6 after:h-6 after:right-0 after:translate-x-8 after:text-[.75rem] font-tertiary"
           />
         </section>
       </main>
