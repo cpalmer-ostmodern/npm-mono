@@ -24,9 +24,7 @@ export default function Page({ params: { lng } }) {
   return (
     <>
       <main>
-        <section>
-          <Header heading={t("h1")} />
-        </section>
+        <section>{/* <Header heading={t("h1")} /> */}</section>
 
         <section>
           <div className="md:h-48 h-[10vh] w-full"></div>
