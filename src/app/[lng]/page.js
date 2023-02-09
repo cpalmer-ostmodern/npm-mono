@@ -86,7 +86,7 @@ export default function Page({
             <NavBar
               logoSize={
                 scrollY === 0
-                  ? [56, 110]
+                  ? [50, 110]
                   : [33, 72]
               }
               logoTw={
@@ -111,11 +111,11 @@ export default function Page({
               logoSize={
                 scrollY === 0
                   ? [72, 144]
-                  : [56, 110]
+                  : [50, 110]
               }
               logoTw={
                 scrollY === 0
-                  ? `mb-[2rem] -mt-[2rem]`
+                  ? `mb-[2rem] -mt-[0.75rem]`
                   : `-mt-[2rem] mb-0`
               }
               tw="relative pl-7 pr-5 pt-3 pb-4 md:pt-4 md:px-10 md:pb-5 bg-white lg:px-20 flex justify-between w-100 sticky"

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { TopicButton } from "../../atoms/button";
-import { Overlay } from "../../atoms/overlay/overlay.component";
+import React, { useState } from 'react';
+import { TopicButton } from '../../atoms/button';
+import { Overlay } from '../../atoms/overlay/overlay.component';
 
 /* eslint-disable-next-line */
 export interface MenuProps {
@@ -10,11 +10,7 @@ export interface MenuProps {
   children?: React.ReactNode | string;
 }
 
-export function Menu({
-  color = "black",
-  size = "2.1rem",
-  twMenuOverlay,
-}: MenuProps) {
+export function Menu({ color = 'black', size, twMenuOverlay }: MenuProps) {
   const [menuActive, setMenuActive] = useState(false);
 
   const handleMenuState = () => {
@@ -29,8 +25,8 @@ export function Menu({
         aria-label="Menu toggle"
         aria-haspopup="true"
         aria-expanded={menuActive}
-        icon={menuActive ? "icon icon-cross" : "icon icon-menu1"}
-        size="30px"
+        icon={menuActive ? 'icon icon-cross' : 'icon icon-menu1'}
+        size={size}
       ></TopicButton>
 
       {menuActive && (

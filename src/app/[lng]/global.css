@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('../../fonts/fonts.css');
+
 /* globals */
 @layer base {
   html {
@@ -10,6 +12,10 @@
 }
 
 /* core */
+
+button.p-3.bg-transparent.flex.justify-between.w-auto.text-xl {
+  margin-top: 16px !important;
+}
 
 /* search modal */
 .search-popup {
