@@ -1,7 +1,7 @@
-import React from "react";
-import { Article } from "../../molecules/article";
-import { TopicButton } from "../../atoms/button";
-import { ArticleGridProps } from "./article-grid.types";
+import React from 'react';
+import { Article } from '../../molecules/article';
+import { TopicButton } from '../../atoms/button';
+import { ArticleGridProps } from './article-grid.types';
 
 export function ArticleGrid({
   articles,
@@ -16,7 +16,7 @@ export function ArticleGrid({
   twArticleCategory,
 }: ArticleGridProps) {
   const setImageOrientation = (index: number) => {
-    return index % 2 ? "portrait" : "square";
+    return index % 2 ? 'portrait' : 'square';
   };
 
   return (
@@ -46,7 +46,7 @@ export function ArticleGrid({
         <div className={twArticleButtonBx}>
           <TopicButton
             topicName={buttonText}
-            icon="arrow-left"
+            icon="icon icon-arrow-left"
             tw={twArticleButton}
           />
         </div>

@@ -1,8 +1,8 @@
-import React from "react";
-import Link from "next/link";
-import { TopicButton } from "../../atoms/button/button.component";
-import { MediaItem } from "../../molecules/media-item";
-import { IMediaItem } from "../../molecules/media-item/media-item.types";
+import React from 'react';
+import Link from 'next/link';
+import { TopicButton } from '../../atoms/button/button.component';
+import { MediaItem } from '../../molecules/media-item';
+import { IMediaItem } from '../../molecules/media-item/media-item.types';
 
 export interface MediaGridProps {
   articles: IMediaItem[];
@@ -43,7 +43,7 @@ export function MediaGrid({
   return (
     <div className={`${twMediaBackground}`}>
       <div className={twMediaGridWrapper}>
-        <Link href={titleLink ? titleLink : "#"}>
+        <Link href={titleLink ? titleLink : '#'}>
           <h2 className={twMediaTitle}>{title}</h2>
         </Link>
 
@@ -71,7 +71,7 @@ export function MediaGrid({
           <div className={twMediaButtonWrapper}>
             <TopicButton
               topicName={buttonText}
-              icon="arrow-left"
+              icon="icon icon-arrow-left"
               tw={`${twMediaButton}`}
             />
           </div>
