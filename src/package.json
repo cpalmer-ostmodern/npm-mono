@@ -20,7 +20,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-i18next": "12.1.4",
-    "srmg-dev-ui-001": "^0.1.17",
+    "srmg-dev-ui-001": "^0.1.19",
     "@splidejs/react-splide": "^0.7.12"
   },
   "devDependencies": {
