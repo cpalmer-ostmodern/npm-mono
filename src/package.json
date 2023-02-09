@@ -1,5 +1,5 @@
 {
-  "name": "next-13-app-dir-i18next-example",
+  "name": "hia-nxt-app",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
@@ -19,9 +19,17 @@
     "next": "13.1.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-i18next": "12.1.4"
+    "react-i18next": "12.1.4",
+    "srmg-dev-ui-001": "^0.1.20",
+    "@splidejs/react-splide": "^0.7.12"
   },
   "devDependencies": {
-    "locize-cli": "7.13.1"
+    "@types/node": "^18.13.0",
+    "autoprefixer": "^10.4.13",
+    "locize-cli": "7.13.1",
+    "postcss": "^8.4.21",
+    "postcss-import": "^15.1.0",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.9.5"
   }
 }

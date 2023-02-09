@@ -1,0 +1,109 @@
+
+@import "tailwindcss/base";
+
+@layer base {
+  @font-face {
+    font-family: "Laureen Pro";
+    font-weight: 300;
+    font-display: swap;
+    src: url('./lareen-pro/Laureenpro-Light.woff') format("woff"),
+    url('./lareen-pro/Laureenpro-Light.woff2') format("woff2");
+  }
+
+  @font-face {
+    font-family: "Laureen Pro";
+    font-weight: 400;
+    font-display: swap;
+    src: url('./lareen-pro/Laureenpro-Regular.woff') format("woff"),
+    url('./lareen-pro/Laureenpro-Regular.woff2') format("woff2");
+  }
+
+  @font-face {
+    font-family: "Laureen Pro";
+    font-weight: 500;
+    font-display: swap;
+    src: url('./lareen-pro/Laureenpro-Medium.woff') format("woff"),
+    url('./lareen-pro/Laureenpro-Medium.woff2') format("woff2");
+  }
+
+  @font-face {
+    font-family: "Laureen Pro";
+    font-weight: 600;
+    font-display: swap;
+    src: url('./lareen-pro/Laureenpro-SemiBold.woff') format("woff"),
+    url('./lareen-pro/Laureenpro-SemiBold.woff2') format("woff2");
+  }
+
+  @font-face {
+    font-family: "Laureen Pro";
+    font-weight: 700;
+    font-display: swap;
+    src: url('./lareen-pro/Laureenpro-Bold.woff') format("woff"),
+    url('./lareen-pro/Laureenpro-Bold.woff2') format("woff2");
+  }
+
+  @font-face {
+    font-family: "Greta Arabic";
+    font-weight: 300;
+    font-display: swap;
+    src: url('./greta-arabic/GretaArabic-Light.woff2') format("woff2"),
+    url('./greta-arabic/GretaArabic-Light.woff') format("woff");
+  }
+
+  @font-face {
+    font-family: "Greta Arabic";
+    font-weight: 500;
+    font-display: swap;
+    src: url('./greta-arabic/GretaArabic-Medium.woff') format("woff"),
+    url('./greta-arabic/GretaArabic-Medium.woff2') format("woff2");
+  }
+
+  @font-face {
+    font-family: "Saol Text";
+    font-weight: 400;
+    font-display: swap;
+    src: url('./saol-text/SaolText-Regular.eot') format("embedded-opentype");
+    src: url('./saol-text/SaolText-Regular.eot#iefix') format("embedded-opentype"),
+    url('./saol-text/SaolText-Regular.woff2') format("woff2"),
+    url('./saol-text/SaolText-Regular.woff') format("woff");
+  }
+
+  @font-face {
+    font-family: "Saol Text";
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+    src: url('./saol-text/SaolText-RegularItalic.eot') format("embedded-opentype");
+    src: url('./saol-text/SaolText-RegularItalic.eot#iefix') format("embedded-opentype"),
+    url('./saol-text/SaolText-RegularItalic.woff2') format("woff2"),
+    url('./saol-text/SaolText-RegularItalic.woff') format("woff");
+  }
+
+  @font-face {
+    font-family: "Saol Text";
+    font-weight: 600;
+    font-display: swap;
+    src: url('./saol-text/SaolText-Semibold.eot') format("embedded-opentype");
+    src: url('./saol-text/SaolText-Semibold.eot#iefix') format("embedded-opentype"),
+    url('./saol-text/SaolText-Semibold.woff2') format("woff2"),
+    url('./saol-text/SaolText-Semibold.woff') format("woff");
+  }
+
+  @font-face {
+    font-family: "Graphik Arabic";
+    font-weight: 400;
+    font-display: swap;
+    font-stretch: normal;
+    src:url('./graphik-arabic/GraphikArabic-Regular-Web.woff2') format("woff2"),
+    url('./graphik-arabic/GraphikArabic-Regular-Web.woff') format("woff");
+  }
+
+  @font-face {
+    font-family: "Graphik Arabic";
+    font-weight: 500;
+    font-display: swap;
+    font-stretch: normal;
+    src:url('./graphik-arabic/GraphikArabic-Medium-Web.woff2') format("woff2"),
+    url('./graphik-arabic/GraphikArabic-Medium-Web.woff') format("woff");
+  }
+}

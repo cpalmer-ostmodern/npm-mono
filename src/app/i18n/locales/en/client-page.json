@@ -1,9 +1,0 @@
-{
-  "back-to-home": "Back to main page",
-  "counter_one": "one selected",
-  "counter_other": "{{count}} selected",
-  "counter_zero": "none selected",
-  "h1": "A client side to demonstrate the client side i18n",
-  "title": "Client Side",
-  "to-second-client-page": "to the second client page"
-}
