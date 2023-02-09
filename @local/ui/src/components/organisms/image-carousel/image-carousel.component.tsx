@@ -65,7 +65,7 @@ export function ImageCarousel({
         <div className="col-span-2">
           <h2
             id="chosen-articles"
-            className="text-right font-bold font-primary text-9xl text-grey-100 ml-10"
+            className="text-right font-bold font-primary text-9xl text-grey-100"
           >
             اخترنا لكم
           </h2>
