@@ -29,12 +29,10 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-i18next": "12.1.4",
-    "srmg-dev-ui-001": "^0.1.17",
+    "srmg-dev-ui-001": "^0.1.19",
     "webpack-cli": "^4.10.0"
   },
   "devDependencies": {
-    "@splidejs/react-splide": "^0.7.12",
-    "@splidejs/splide": "^4.1.4",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.4.0",
     "@types/node": "^18.13.0",
@@ -43,7 +41,8 @@
     "locize-cli": "7.13.1",
     "prettier": "^2.8.4",
     "ts-jest": "^29.0.5",
-    "typescript": "~4.9.5"
+    "typescript": "~4.9.5",
+    "@splidejs/react-splide": "^0.7.12"
   },
   "keywords": [],
   "author": "",

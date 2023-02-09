@@ -1,9 +1,11 @@
 {
-  "back-to-home": "العودة إلى المنزل",
-  "counter_one": "واحد محدد",
-  "counter_other": "{{count}} المحدد",
-  "counter_zero": "لا شيء محدد",
-  "h1": "صفحة عميل لتوضيح جانب العميل i18n",
-  "title": "صفحة العميل",
-  "to-second-client-page": "إلى صفحة العميل الثانية"
+  "h1": "The Muse of Incommunicability",
+  "img-title": "اخترنا لكم",
+  "img-sub-title": "خاص هي",
+  "back-to-home": "Back to main page",
+  "counter_one": "one selected",
+  "counter_other": "{{count}} selected",
+  "counter_zero": "none selected",
+  "title": "Client Side",
+  "to-second-client-page": "to the second client page"
 }
