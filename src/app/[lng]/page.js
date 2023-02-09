@@ -84,14 +84,15 @@ export default function Page({
           >
             {/* <div className="fixed">{scrollY}</div> */}
             <NavBar
-              sSize={'23px'}
               logoSize={
-                scrollY === 0 ? 56 : 33
-              }
-              logoTxt={
                 scrollY === 0
-                  ? true
-                  : false
+                  ? [56, 110]
+                  : [33, 72]
+              }
+              logoTw={
+                scrollY === 0
+                  ? `mb-[2rem] -mt-[2rem]`
+                  : `-mt-[2rem] mb-0`
               }
               tw="relative pl-7 pr-5 pt-3 pb-4 md:pt-4 md:px-10 md:pb-5 bg-white lg:px-20 flex justify-between w-100 sticky"
               twMenuOverlay="-z-10 p-5 bg-gold-500 min-h-screen flex justify-center items-center absolute left-0 top-0 w-full"
