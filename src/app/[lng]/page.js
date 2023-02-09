@@ -150,11 +150,11 @@ export default function Page({
           <ImageCarousel
             width={'100%'}
             height={'50%'}
-            gap={'5rem'}
+            gap={'3rem'}
             columns={12}
             articles={articles_7}
             twCarouselContainer={
-              'col-span-9 h-90'
+              'col-span-8'
             }
             twArticleImg="w-full overflow-hidden p-5"
             twArticleTitle="text-xl font-primary font-medium text-right mt-4"
