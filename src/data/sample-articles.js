@@ -97,6 +97,13 @@ export const articles_7 = [
     thumbnail: '',
     imageAlt: '',
   },
+  {
+    link: '#',
+    category: '',
+    title: '',
+    thumbnail: '',
+    imageAlt: '',
+  },
 ];
 
 export const media_articles = [
