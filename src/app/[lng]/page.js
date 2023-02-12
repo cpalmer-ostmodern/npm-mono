@@ -21,8 +21,8 @@ import {
   articles,
   articles_7,
   media_articles,
-} from './(data)/sample-articles';
-import { article_grid_7 } from './(data)/sample-articles';
+  article_grid_7,
+} from '../../data/sample-articles';
 
 export default function Page({
   params: { lng },
