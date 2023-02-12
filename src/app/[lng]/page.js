@@ -22,6 +22,7 @@ import {
   articles_7,
   media_articles,
 } from './(data)/sample-articles';
+import { article_grid_7 } from './(data)/sample-articles';
 
 export default function Page({
   params: { lng },
@@ -133,13 +134,16 @@ export default function Page({
                     ? `mb-[2rem] -mt-[0.75rem]`
                     : `-mt-[2rem] mb-0`
                 }
+                menuIconSize={38}
+                searchIconSize={28}
                 tw="relative pl-7 pr-5 pt-3 pb-4 md:pt-4 md:px-10 md:pb-5 bg-white lg:px-20 flex justify-between w-100 sticky"
                 twMenuOverlay="-z-10 p-5 bg-gold-500 min-h-screen flex justify-center items-center absolute left-0 top-0 w-full"
                 twSearchOverlay="-z-10 p-5 bg-neutral-400 min-h-screen flex justify-center items-center absolute left-0 top-0 w-full"
               />
               <NavLinks
-                tw="bg-white sm:hidden md:flex -mt-2 pt-2 pb-5 pr-20 pl-20 flex justify-center w-100 flex flex-row content-between space-x-12 !font-tertiary font-lg line-height-[22px]"
+                tw="bg-white sm:hidden md:flex -mt-2 pt-2 pb-5 pr-20 pl-20 flex justify-center w-100 flex flex-row content-between space-x-12 font-tertiary font-lg line-height-[22px]"
                 links={navLinks}
+                twLink="font-tertiary text-lg"
               ></NavLinks>
             </header>
           </Suspense>
@@ -166,17 +170,17 @@ export default function Page({
             />
           </Suspense>
         </section>
-        <section className="mb-16 text-center">
+        <section className="mb-16 text-center ml-20">
           <Suspense>
             <ImageCarousel
               width={'100%'}
-              height={'150%'}
+              height={'100%'}
               gap={'3rem'}
               columns={12}
               direction="rtl"
               articles={articles_7}
               twCarouselContainer={
-                'col-span-9'
+                'col-span-8 p-5'
               }
               title={t('img-title')}
               twArticleImg="w-full overflow-hidden"
@@ -193,27 +197,6 @@ export default function Page({
               buttonText="المزيد"
               twArticleGrid="flex grid grid-cols-1 md:grid-cols-4 gap-12"
               twArticle=""
-              twArticleImg="w-full overflow-hidden"
-              twArticleButtonBx="flex justify-center mt-14"
-              twArticleButton="p-2 bg-white border font-tertiary border-black flex justify-between w-60 md:w-1/5"
-              twArticleTitle="text-xl font-primary font-medium text-right mt-4"
-              twArticleCategory="mt-4 text-right text-sm font-tertiary"
-            />
-          </Suspense>
-        </section>
-        <section className="max-w-container px-6 xl:mx-auto mb-16">
-          <Suspense>
-            <ArticleGridWithTitle
-              title="لايف ستايل"
-              titleLink=""
-              articles={articles}
-              direction="ltr"
-              columns={4}
-              buttonText="المزيد"
-              titleRightAligned
-              twArticle=""
-              twGridTitle="w-full text-right text-5xl lg:text-6xl xl:text-8xl font-bold font-primary text-neutral-400 mb-8"
-              twArticleGrid="flex-row-reverse grid gap-9 overflow-scroll md:overflow-hidden md:flex-row md:gap-12 max-md:flex"
               twArticleImg="w-full overflow-hidden"
               twArticleButtonBx="flex justify-center mt-14"
               twArticleButton="p-2 bg-white border font-tertiary border-black flex justify-between w-60 md:w-1/5"
@@ -240,6 +223,27 @@ export default function Page({
               twMediaButtonWrapper="flex justify-center mt-14"
               twMediaMetaWrapper="flex justify-end text-base font-body mt-4"
               twMediaMetaDivider="relative after:content-['◆'] after:bg-no-repeat after:absolute after:w-6 after:h-6 after:right-0 after:translate-x-8 after:text-[.75rem] font-tertiary"
+            />
+          </Suspense>
+        </section>
+        <section className="max-w-container px-6 xl:mx-auto mb-16">
+          <Suspense>
+            <ArticleGridWithTitle
+              title="لايف ستايل"
+              titleLink=""
+              articles={article_grid_7}
+              direction="ltr"
+              columns={4}
+              buttonText="المزيد"
+              titleRightAligned
+              twArticle=""
+              twGridTitle="w-full text-right text-5xl lg:text-6xl xl:text-8xl font-bold font-primary text-neutral-400 mb-8"
+              twArticleGrid="flex-row-reverse grid gap-9 overflow-scroll md:overflow-hidden md:flex-row md:gap-12 max-md:flex"
+              twArticleImg="w-full overflow-hidden"
+              twArticleButtonBx="flex justify-center mt-14"
+              twArticleButton="p-2 bg-white border font-tertiary border-black flex justify-between w-60 md:w-1/5"
+              twArticleTitle="text-xl font-primary font-medium text-right mt-4"
+              twArticleCategory="mt-4 text-right text-sm font-tertiary"
             />
           </Suspense>
         </section>

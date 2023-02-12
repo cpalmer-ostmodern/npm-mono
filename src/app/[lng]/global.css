@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('../../fonts/fonts.css');
-
 /* globals */
 @layer base {
   html {
@@ -12,6 +10,13 @@
 }
 
 /* core */
+
+article.h3 {
+  font-family: 'Laureen pro';
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 35px;
+}
 
 button.p-3.bg-transparent.flex.justify-between.w-auto.text-xl {
   margin-top: 16px !important;
@@ -69,9 +74,9 @@ div#splide01-track {
   display: block;
   width: 0%;
   transform: scale(1.25);
-  right: -19%;
+  right: -35%;
   color: #212121;
-  margin-top: 40%;
+  margin-top: 48%;
 }
 
 .splide__pagination {
@@ -2934,4 +2939,121 @@ div#splide01-track {
 }
 .icon-text-align-right:before {
   content: '\e9aa';
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Laureen Pro';
+    font-weight: 300;
+    font-display: swap;
+    src: url('../../fonts/lareen-pro/Laureenpro-Light.woff') format('woff'),
+      url('../../fonts/lareen-pro/Laureenpro-Light.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Laureen Pro';
+    font-weight: 400;
+    font-display: swap;
+    src: url('../../fonts/lareen-pro/Laureenpro-Regular.woff') format('woff'),
+      url('../../fonts/lareen-pro/Laureenpro-Regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Laureen Pro';
+    font-weight: 500;
+    font-display: swap;
+    src: url('../../fonts/lareen-pro/Laureenpro-Medium.woff') format('woff'),
+      url('../../fonts/lareen-pro/Laureenpro-Medium.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Laureen Pro';
+    font-weight: 600;
+    font-display: swap;
+    src: url('../../fonts/lareen-pro/Laureenpro-SemiBold.woff') format('woff'),
+      url('../../fonts/lareen-pro/Laureenpro-SemiBold.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Laureen Pro';
+    font-weight: 700;
+    font-display: swap;
+    src: url('../../fonts/lareen-pro/Laureenpro-Bold.woff') format('woff'),
+      url('../../fonts/lareen-pro/Laureenpro-Bold.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Greta Arabic';
+    font-weight: 300;
+    font-display: swap;
+    src: url('../../fonts/greta-arabic/GretaArabic-Light.woff2') format('woff2'),
+      url('../../fonts/greta-arabic/GretaArabic-Light.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Greta Arabic';
+    font-weight: 500;
+    font-display: swap;
+    src: url('../../fonts/greta-arabic/GretaArabic-Medium.woff') format('woff'),
+      url('../../fonts/greta-arabic/GretaArabic-Medium.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Saol Text';
+    font-weight: 400;
+    font-display: swap;
+    src: url('../../fonts/saol-text/SaolText-Regular.eot')
+      format('embedded-opentype');
+    src: url('../../fonts/saol-text/SaolText-Regular.eot#iefix')
+        format('embedded-opentype'),
+      url('../../fonts/saol-text/SaolText-Regular.woff2') format('woff2'),
+      url('../../fonts/saol-text/SaolText-Regular.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Saol Text';
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+    src: url('../../fonts/saol-text/SaolText-RegularItalic.eot')
+      format('embedded-opentype');
+    src: url('../../fonts/saol-text/SaolText-RegularItalic.eot#iefix')
+        format('embedded-opentype'),
+      url('../../fonts/saol-text/SaolText-RegularItalic.woff2') format('woff2'),
+      url('../../fonts/saol-text/SaolText-RegularItalic.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Saol Text';
+    font-weight: 600;
+    font-display: swap;
+    src: url('../../fonts/saol-text/SaolText-Semibold.eot')
+      format('embedded-opentype');
+    src: url('../../fonts/saol-text/SaolText-Semibold.eot#iefix')
+        format('embedded-opentype'),
+      url('../../fonts/saol-text/SaolText-Semibold.woff2') format('woff2'),
+      url('../../fonts/saol-text/SaolText-Semibold.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Graphik Arabic';
+    font-weight: 400;
+    font-display: swap;
+    font-stretch: normal;
+    src: url('../../fonts/graphik-arabic/GraphikArabic-Regular-Web.woff2')
+        format('woff2'),
+      url('../../fonts/graphik-arabic/GraphikArabic-Regular-Web.woff')
+        format('woff');
+  }
+
+  @font-face {
+    font-family: 'Graphik Arabic';
+    font-weight: 500;
+    font-display: swap;
+    font-stretch: normal;
+    src: url('../../fonts/graphik-arabic/GraphikArabic-Medium-Web.woff2')
+        format('woff2'),
+      url('../../fonts/graphik-arabic/GraphikArabic-Medium-Web.woff')
+        format('woff');
+  }
 }
