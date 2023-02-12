@@ -16,7 +16,7 @@ export function ImageCarousel({
   twArticleCategory,
 }: any) {
   const setImageOrientation = (index: number) => {
-    return index % 2 ? 'portrait' : 'square';
+    return index % 2 ? 'square' : 'portrait';
   };
   return (
     <section className="!mt-60">
