@@ -83,27 +83,6 @@ export const articles_7 = [
       'https://static.hiamag.com/styles/792x792/public/2023-02/_ODS9275.jpg?h=6715c897&itok=8348-tJU',
     imageAlt: 'HIA image',
   },
-  {
-    link: '#',
-    category: '',
-    title: '',
-    thumbnail: '',
-    imageAlt: '',
-  },
-  {
-    link: '#',
-    category: '',
-    title: '',
-    thumbnail: '',
-    imageAlt: '',
-  },
-  {
-    link: '#',
-    category: '',
-    title: '',
-    thumbnail: '',
-    imageAlt: '',
-  },
 ];
 
 export const media_articles = [
