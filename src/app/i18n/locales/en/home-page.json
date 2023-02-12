@@ -1,7 +1,32 @@
 {
+  "links": {
+    "nav1": "Podcast",
+    "href1": "#",
+    "nav2": "Video",
+    "href2": "#",
+    "nav3": "News",
+    "href3": "#",
+    "nav4": "Life style",
+    "href4": "#",
+    "nav5": "Entertainment and Arts",
+    "href5": "#",
+    "nav6": "Beauty",
+    "href6": "#",
+    "nav7": "Fashion",
+    "href7": "#"
+  },
   "h1": "The Muse of Incommunicability",
   "img-title": "We Choose For You",
   "img-sub-title": "special 'she'",
+  "img-carousel": {
+    "article-title1": "",
+    "article-title2": "",
+    "article-title3": "",
+    "article-title4": "",
+    "article-title5": "",
+    "article-title6": "",
+    "article-title7": ""
+  },
   "back-to-home": "Back to main page",
   "counter_one": "one selected",
   "counter_other": "{{count}} selected",

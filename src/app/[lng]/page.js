@@ -21,7 +21,7 @@ import {
   articles,
   articles_7,
   media_articles,
-} from '../../data/sample-articles';
+} from './(data)/sample-articles';
 
 export default function Page({
   params: { lng },
@@ -49,28 +49,41 @@ export default function Page({
     };
   }, []);
 
-  const navLinks = [
-    { name: 'بودكاست', href: '#' },
-    { name: 'فيديو', href: '#' },
-    { name: 'أخبار', href: '#' },
-    { name: 'لايف ستايل', href: '#' },
-    { name: 'ترفيه وفنون', href: '#' },
-    { name: 'جمال', href: '#' },
-    { name: 'موضة', href: '#' },
-  ];
-
   const { t } = useTranslation(
     lng,
     'home-page',
   );
 
-  const [counter, setCounter] =
-    useState(0);
-
-  const imgCaption = {
-    title: 'اخترنا لكم',
-    body: 'Luminous Fantasy روعة البدايات الجديدة مع Van Cleef & Arpels',
-  };
+  const navLinks = [
+    {
+      name: t('links.nav1'),
+      href: t('links.href1'),
+    },
+    {
+      name: t('links.nav2'),
+      href: t('links.href2'),
+    },
+    {
+      name: t('links.nav3'),
+      href: t('links.href3'),
+    },
+    {
+      name: t('links.nav4'),
+      href: t('links.href4'),
+    },
+    {
+      name: t('links.nav5'),
+      href: t('links.href5'),
+    },
+    {
+      name: t('links.nav6'),
+      href: t('links.href6'),
+    },
+    {
+      name: t('links.nav7'),
+      href: t('links.href7'),
+    },
+  ];
 
   return (
     <>
@@ -131,7 +144,6 @@ export default function Page({
             </header>
           </Suspense>
         </section>
-
         <section>
           <div className="md:h-48 h-[10vh] w-full"></div>
         </section>
@@ -154,7 +166,6 @@ export default function Page({
             />
           </Suspense>
         </section>
-
         <section className="mb-16 text-center">
           <Suspense>
             <ImageCarousel
@@ -167,13 +178,13 @@ export default function Page({
               twCarouselContainer={
                 'col-span-9'
               }
+              title={t('img-title')}
               twArticleImg="w-full overflow-hidden"
               twArticleTitle="text-xl font-primary font-medium text-right mt-4"
               twArticleCategory="mt-4 text-right text-sm font-tertiary"
             ></ImageCarousel>
           </Suspense>
         </section>
-
         <section className="max-w-container px-6 xl:mx-auto mb-24">
           <Suspense>
             <ArticleGrid

@@ -1,8 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import React from 'react';
 import { ImageCarousel } from './image-carousel.component';
 
-export const articles_7 = [
+const articles_7 = [
   {
     link: '#',
     category: 'سياحة وسفر',
@@ -85,4 +84,5 @@ Default.args = {
   columns: 12,
   articles: articles_7,
   twCarouselContainer: 'col-span-9 flex',
+  title: 'اخترنا لكم',
 };

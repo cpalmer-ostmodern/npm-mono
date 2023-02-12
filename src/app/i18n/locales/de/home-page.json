@@ -1,4 +1,20 @@
 {
+  "links": {
+    "nav1": "Podcast",
+    "href1": "#",
+    "nav2": "Video",
+    "href2": "#",
+    "nav3": "Nachricht",
+    "href3": "#",
+    "nav4": "Lebensstil",
+    "href4": "#",
+    "nav5": "Unterhaltung und Kunst",
+    "href5": "#",
+    "nav6": "Schönheit",
+    "href6": "#",
+    "nav7": "Mode",
+    "href7": "#"
+  },
   "h1": "Die Muse der Unkommunizierbarkeit",
   "img-title": "Wir wählen für Sie",
   "img-sub-title": "special 'she'",

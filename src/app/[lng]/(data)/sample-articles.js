@@ -33,7 +33,7 @@ export const articles_7 = [
     link: '#',
     category: 'سياحة وسفر',
     title:
-      'تتميز بالفخامة والمتعة والتجارب الاستثنائية.. سر اختيار النجوم لـ"دبي" لقضاء شهر العسل',
+      'Bright and modern aesthetic trends on the first day of New York Fashion Week for Winter 2023',
     thumbnail:
       'https://static.hiamag.com/styles/673x940/public/2023-02/1%20%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9%20%D8%B1%D8%B3%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D9%83%D9%8A%D8%A7%D8%AC%20%D8%A7%D9%84%D8%A8%D8%B1%D9%88%D9%86%D8%B2%D9%8A%20%D8%A7%D9%84%D9%81%D8%A7%D8%AA%D8%AD%20%D8%B9%D9%84%D9%89%20%D8%B7%D8%B1%D9%8A%D9%82%D8%A9%20%D8%AF%D8%A7%D8%B1%20Tiffany%20Brown.jpg?h=371c1c89&itok=OwtFLPSu',
     imageAlt: 'HIA image',

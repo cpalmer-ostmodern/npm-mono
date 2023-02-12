@@ -9,6 +9,7 @@ export function ImageCarousel({
   direction,
   columns = 12,
   articles,
+  title,
   twCarouselContainer,
   twArticleImg,
   twArticleTitle,
@@ -69,7 +70,7 @@ export function ImageCarousel({
             id="chosen-articles"
             className="text-right font-bold font-primary text-9xl text-grey-100"
           >
-            اخترنا لكم
+            {title}
           </h2>
         </div>
       </div>

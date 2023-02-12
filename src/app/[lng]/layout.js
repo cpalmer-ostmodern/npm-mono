@@ -3,7 +3,8 @@
 import './global.css';
 import '@splidejs/react-splide/css';
 
-import { dir } from 'i18next';
+// disable dir = direction for now due to alignment issues
+// import { dir } from 'i18next';
 import { languages } from '../i18n/settings';
 
 export async function generateStaticParams() {
@@ -17,7 +18,8 @@ export default function RootLayout({
   params: { lng },
 }) {
   return (
-    <html lang={lng} dir={dir(lng)}>
+    // dir={dir(lng)}
+    <html lang={lng}>
       <head />
       <body>{children}TEST</body>
     </html>
