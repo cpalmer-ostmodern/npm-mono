@@ -64,7 +64,7 @@ export function ImageCarousel({
             </SplideTrack>
           </Splide>
         </div>
-        <div className="col-span-2">
+        <div className="col-span-3">
           <h2
             id="chosen-articles"
             className="text-right font-bold font-primary text-9xl text-grey-100"

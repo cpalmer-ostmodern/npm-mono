@@ -53,7 +53,7 @@ div#splide01-track {
 }
 
 .splide__arrow--next {
-  right: 1em !important;
+  right: 0em !important;
   font-size: 38px !important;
   background: none !important;
 }
@@ -64,14 +64,14 @@ div#splide01-track {
   background: none !important;
 }
 
-.splide__arrows.splide__arrows--ltr {
+.splide__arrows.splide__arrows--rtl {
   position: absolute;
   display: block;
   width: 0%;
-  transform: scale(1.5);
-  right: -30%;
+  transform: scale(1.25);
+  right: -19%;
   color: #212121;
-  margin-top: 50%;
+  margin-top: 40%;
 }
 
 .splide__pagination {

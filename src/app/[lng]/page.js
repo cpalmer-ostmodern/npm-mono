@@ -162,6 +162,7 @@ export default function Page({
               height={'150%'}
               gap={'3rem'}
               columns={12}
+              direction="rtl"
               articles={articles_7}
               twCarouselContainer={
                 'col-span-9'
@@ -195,7 +196,7 @@ export default function Page({
               title="لايف ستايل"
               titleLink=""
               articles={articles}
-              direction="rtl"
+              direction="ltr"
               columns={4}
               buttonText="المزيد"
               titleRightAligned
