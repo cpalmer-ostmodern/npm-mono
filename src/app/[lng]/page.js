@@ -50,13 +50,13 @@ export default function Page({
   }, []);
 
   const navLinks = [
-    { name: 'موضة', href: '#' },
-    { name: 'جمال', href: '#' },
-    { name: 'ترفيه وفنون', href: '#' },
-    { name: 'لايف ستايل', href: '#' },
-    { name: 'أخبار', href: '#' },
-    { name: 'فيديو', href: '#' },
     { name: 'بودكاست', href: '#' },
+    { name: 'فيديو', href: '#' },
+    { name: 'أخبار', href: '#' },
+    { name: 'لايف ستايل', href: '#' },
+    { name: 'ترفيه وفنون', href: '#' },
+    { name: 'جمال', href: '#' },
+    { name: 'موضة', href: '#' },
   ];
 
   const { t } = useTranslation(
@@ -125,7 +125,7 @@ export default function Page({
                 twSearchOverlay="-z-10 p-5 bg-neutral-400 min-h-screen flex justify-center items-center absolute left-0 top-0 w-full"
               />
               <NavLinks
-                tw="bg-white sm:hidden md:flex -mt-2 pt-2 pb-5 pr-20 pl-20 flex justify-center w-100 flex flex-row content-between space-x-12 !font-secondary"
+                tw="bg-white sm:hidden md:flex -mt-2 pt-2 pb-5 pr-20 pl-20 flex justify-center w-100 flex flex-row content-between space-x-12 !font-tertiary font-lg line-height-[22px]"
                 links={navLinks}
               ></NavLinks>
             </header>
@@ -159,14 +159,14 @@ export default function Page({
           <Suspense>
             <ImageCarousel
               width={'100%'}
-              height={'50%'}
+              height={'150%'}
               gap={'3rem'}
               columns={12}
               articles={articles_7}
               twCarouselContainer={
-                'col-span-8'
+                'col-span-9'
               }
-              twArticleImg="w-full overflow-hidden p-5"
+              twArticleImg="w-full overflow-hidden"
               twArticleTitle="text-xl font-primary font-medium text-right mt-4"
               twArticleCategory="mt-4 text-right text-sm font-tertiary"
             ></ImageCarousel>
@@ -194,7 +194,8 @@ export default function Page({
             <ArticleGridWithTitle
               title="لايف ستايل"
               titleLink=""
-              articles={articles_7}
+              articles={articles}
+              direction="rtl"
               columns={4}
               buttonText="المزيد"
               titleRightAligned
