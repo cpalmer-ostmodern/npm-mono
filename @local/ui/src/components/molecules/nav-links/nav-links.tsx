@@ -8,18 +8,19 @@ export type linkPropDto = {
 
 /* eslint-disable-next-line */
 export interface NavLinksProps {
-  tw: string;
-  links: linkPropDto[];
+  tw?: string;
+  links?: linkPropDto[];
+  twLink?: string;
 }
 
-export function NavLinks(props: NavLinksProps) {
+export function NavLinks({ tw, links, twLink }: NavLinksProps) {
   return (
-    <ul className={props.tw}>
-      {props.links &&
-        props.links?.map(function (item, index) {
+    <ul className={tw}>
+      {links &&
+        links?.map(function (item, index) {
           return (
-            <li className="" key={index}>
-              <Link className="font-primary text-lg" href={item.href}>
+            <li className={twLink} key={index}>
+              <Link className={twLink} href={item.href}>
                 {item.name}
               </Link>
             </li>

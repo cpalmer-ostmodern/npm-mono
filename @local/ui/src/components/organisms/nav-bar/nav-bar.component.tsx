@@ -12,6 +12,8 @@ export interface NavBarProps {
   logoTw?: string;
   logoTxt?: boolean;
   logoSize?: number[];
+  searchIconSize?: number | string;
+  menuIconSize?: number | string;
   tw?: string;
   twSearchOverlay?: string;
   twMenuOverlay?: string;
@@ -22,14 +24,16 @@ export function NavBar({
   logoTw,
   logoTxt,
   logoSize,
+  menuIconSize,
+  searchIconSize,
   twMenuOverlay,
   twSearchOverlay,
 }: NavBarProps) {
   return (
     <nav className={tw}>
-      <SearchToggle twSearchOverlay={twSearchOverlay} />
+      <SearchToggle size={searchIconSize} twSearchOverlay={twSearchOverlay} />
       <Logo tw={logoTw} hasText={logoTxt} size={logoSize}></Logo>
-      <Menu twMenuOverlay={twMenuOverlay}></Menu>
+      <Menu size={menuIconSize} twMenuOverlay={twMenuOverlay}></Menu>
     </nav>
   );
 }

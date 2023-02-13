@@ -11,7 +11,7 @@ export interface SearchProps {
   children?: React.ReactNode | string;
 }
 
-export function SearchToggle({ twSearchOverlay }: SearchProps) {
+export function SearchToggle({ twSearchOverlay, size }: SearchProps) {
   const [menuActive, setMenuActive] = useState(false);
 
   const handleMenuState = () => {
@@ -27,7 +27,7 @@ export function SearchToggle({ twSearchOverlay }: SearchProps) {
         aria-haspopup="true"
         aria-expanded={menuActive}
         icon={menuActive ? 'icon icon-cross' : 'icon icon-magnifier'}
-        size="28px"
+        size={size}
       ></TopicButton>
 
       {menuActive && (

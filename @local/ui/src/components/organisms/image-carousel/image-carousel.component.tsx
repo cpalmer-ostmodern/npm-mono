@@ -6,8 +6,10 @@ export function ImageCarousel({
   width,
   height,
   gap,
+  direction,
   columns = 12,
   articles,
+  title,
   twCarouselContainer,
   twArticleImg,
   twArticleTitle,
@@ -15,7 +17,7 @@ export function ImageCarousel({
   twArticleCategory,
 }: any) {
   const setImageOrientation = (index: number) => {
-    return index % 2 ? 'portrait' : 'square';
+    return index % 2 ? 'square' : 'portrait';
   };
   return (
     <section className="!mt-60">
@@ -31,6 +33,7 @@ export function ImageCarousel({
             options={{
               arrowPath:
                 'M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z',
+              direction: direction,
               perPage: 3,
               perMove: 1,
               height: height,
@@ -62,12 +65,12 @@ export function ImageCarousel({
             </SplideTrack>
           </Splide>
         </div>
-        <div className="col-span-2">
+        <div className="col-span-3">
           <h2
             id="chosen-articles"
             className="text-right font-bold font-primary text-9xl text-grey-100"
           >
-            اخترنا لكم
+            {title}
           </h2>
         </div>
       </div>

@@ -1,5 +1,21 @@
 {
-  "h1": "The Muse of Incommunicability",
+  "links": {
+    "nav1": "بودكاست",
+    "href1": "#",
+    "nav2": "فيديو",
+    "href2": "#",
+    "nav3": "أخبار",
+    "href3": "#",
+    "nav4": "لايف ستايل",
+    "href4": "#",
+    "nav5": "ترفيه وفنون",
+    "href5": "#",
+    "nav6": "جمال",
+    "href6": "#",
+    "nav7": "موضة",
+    "href7": "#"
+  },
+  "h1": "موسى من التواصل",
   "img-title": "اخترنا لكم",
   "img-sub-title": "خاص هي",
   "back-to-home": "Back to main page",

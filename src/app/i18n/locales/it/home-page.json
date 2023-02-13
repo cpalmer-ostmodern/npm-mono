@@ -1,4 +1,20 @@
 {
+  "links": {
+    "nav1": "Podcast",
+    "href1": "#",
+    "nav2": "Video",
+    "href2": "#",
+    "nav3": "Notizia",
+    "href3": "#",
+    "nav4": "Stile di vita",
+    "href4": "#",
+    "nav5": "Spettacolo e Arte",
+    "href5": "#",
+    "nav6": "Bellezza",
+    "href6": "#",
+    "nav7": "Moda",
+    "href7": "#"
+  },
   "h1": "La musa dell'incomunicabilità",
   "img-title": "Scegliamo per te",
   "img-sub-title": "special 'she'",

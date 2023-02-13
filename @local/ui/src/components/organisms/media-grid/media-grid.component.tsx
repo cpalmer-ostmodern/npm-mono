@@ -72,7 +72,8 @@ export function MediaGrid({
             <TopicButton
               topicName={buttonText}
               icon="icon icon-arrow-left"
-              tw={`${twMediaButton}`}
+              tw={twMediaButton}
+              size={'28px'}
             />
           </div>
         )}

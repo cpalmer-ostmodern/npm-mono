@@ -1,10 +1,10 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
-import { ArticleImage } from "../../atoms/article/article-image/article-image.component";
-import { ArticleCategory } from "../../atoms/article/article-category/article-category.component";
+import { ArticleImage } from '../../atoms/article/article-image/article-image.component';
+import { ArticleCategory } from '../../atoms/article/article-category/article-category.component';
 
-import { IArticle } from "./article.types";
+import { IArticle } from './article.types';
 
 /* eslint-disable-next-line */
 
@@ -21,11 +21,11 @@ export function Article({
   twCategory,
 }: IArticle) {
   return (
-    <Link href={link ? link : "#"}>
+    <Link href={link ? link : '#'}>
       <article className={tw}>
         <ArticleImage
           src={thumbnail}
-          orientation={imageOrientation ? imageOrientation : "portrait"}
+          orientation={imageOrientation}
           alt={imageAlt}
           tw={twImg}
         />
