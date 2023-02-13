@@ -8,7 +8,7 @@ You may use this workspace root folder in order to run an arbitrary command from
 Given a project with configured workspaces, e.g:
 
  
-.
+```terminal
 +-- package.json
 `-- packages
    +-- a
@@ -17,6 +17,7 @@ Given a project with configured workspaces, e.g:
    |   `-- package.json
    `-- c
        `-- package.json
+```
 
 Assuming the workspace configuration is properly set up at the root level package.json file. e.g:
 
