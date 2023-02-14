@@ -42,20 +42,13 @@ module.exports = {
           callback,
         ) {
           const response = await fetch(
-            'http://localhost:3333/api/tokens',
+            'https://2s7jicu0rf.execute-api.eu-west-1.amazonaws.com/prod/lambda-a',
           );
 
           console.log(response.body);
 
           const dt =
             await response.json();
-
-          // if (
-          //   process.env.NODE_ENV ===
-          //   'development'
-          // ) {
-          //   return config;
-          // }
 
           fs.writeFileSync(
             './.tmp/colors.json',
