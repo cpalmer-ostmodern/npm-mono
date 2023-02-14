@@ -29,7 +29,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-i18next": "12.1.4",
-    "srmg-dev-ui-001": "^0.1.32",
+    "srmg-dev-ui-003": "^0.1.32",
     "webpack-cli": "^4.10.0"
   },
   "devDependencies": {
