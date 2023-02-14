@@ -1,11 +1,73 @@
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
+//   swcMinify: true,
+
+//   experimental: {
+//     // Required:
+//     appDir: true,
+//   },
+// };
+
+// module.exports = nextConfig;
+
+const WebpackBeforeBuildPlugin = require('before-build-webpack');
+const fs = require('fs');
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
-  swcMinify: true,
+module.exports = {
+  reactStrictMode: true,
   experimental: {
     // Required:
-    appDir: true
-  }
-}
+    appDir: true,
+  },
 
-module.exports = nextConfig
+  webpack: (
+    config,
+    {
+      buildId,
+      dev,
+      isServer,
+      defaultLoaders,
+      nextRuntime,
+      webpack,
+    },
+  ) => {
+    // console.log(config);
+
+    config.plugins.push(
+      new WebpackBeforeBuildPlugin(
+        async function (
+          stats,
+          callback,
+        ) {
+          const response = await fetch(
+            'http://localhost:3333/api/tokens',
+          );
+
+          console.log(response.body);
+
+          const dt =
+            await response.json();
+
+          // if (
+          //   process.env.NODE_ENV ===
+          //   'development'
+          // ) {
+          //   return config;
+          // }
+
+          fs.writeFileSync(
+            './.tmp/colors.json',
+            JSON.stringify(dt),
+          );
+
+          callback();
+        },
+      ),
+    );
+    // Important: return the modified config
+
+    return config;
+  },
+};

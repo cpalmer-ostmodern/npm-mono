@@ -1,2 +1,2 @@
-import { APIGatewayProxyResult } from "aws-lambda";
-export declare const createResponse: (code: number, name: string) => APIGatewayProxyResult;
+import { APIGatewayProxyResult } from 'aws-lambda';
+export declare const createResponse: (code: number, data: any) => APIGatewayProxyResult;
