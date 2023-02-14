@@ -5,7 +5,9 @@ import ArticleCategory from './article-category.component';
 
 describe('ArticleCategory', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<ArticleCategory>Category Name</ArticleCategory>);
+    const { baseElement } = render(
+      <ArticleCategory>Category Name</ArticleCategory>,
+    );
     expect(baseElement).toBeTruthy();
   });
 });
