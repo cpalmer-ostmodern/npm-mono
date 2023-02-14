@@ -1,16 +1,3 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
-//   swcMinify: true,
-
-//   experimental: {
-//     // Required:
-//     appDir: true,
-//   },
-// };
-
-// module.exports = nextConfig;
-
 const WebpackBeforeBuildPlugin = require('before-build-webpack');
 const fs = require('fs');
 
@@ -21,7 +8,6 @@ module.exports = {
     // Required:
     appDir: true,
   },
-
   webpack: (
     config,
     {
@@ -33,34 +19,40 @@ module.exports = {
       webpack,
     },
   ) => {
-    // console.log(config);
+    if (
+      process.env.NODE_ENV !==
+      'development'
+    ) {
+      // console.log(config);
+      config.plugins.push(
+        new WebpackBeforeBuildPlugin(
+          async function (
+            stats,
+            callback,
+          ) {
+            // 'https://2s7jicu0rf.execute-api.eu-west-1.amazonaws.com/prod/lambda-b',
+            const response =
+              await fetch(
+                'https://2s7jicu0rf.execute-api.eu-west-1.amazonaws.com/prod/lambda-a',
+              );
 
-    config.plugins.push(
-      new WebpackBeforeBuildPlugin(
-        async function (
-          stats,
-          callback,
-        ) {
-          const response = await fetch(
-            'https://2s7jicu0rf.execute-api.eu-west-1.amazonaws.com/prod/lambda-a',
-          );
+            console.log(response.body);
 
-          console.log(response.body);
+            const dt =
+              await response.json();
 
-          const dt =
-            await response.json();
+            fs.writeFileSync(
+              './.tmp/colors.json',
+              JSON.stringify(dt),
+            );
 
-          fs.writeFileSync(
-            './.tmp/colors.json',
-            JSON.stringify(dt),
-          );
-
-          callback();
-        },
-      ),
-    );
-    // Important: return the modified config
-
+            callback();
+          },
+        ),
+      );
+    } else {
+      // do nothing - config has loaded
+    }
     return config;
   },
 };
