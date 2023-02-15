@@ -1,6 +1,6 @@
 {
   "name": "srmg-dev-ui-003",
-  "version": "0.1.36",
+  "version": "0.1.37",
   "description": "This library is made of components.",
   "author": "Ostmodern",
   "main": "dist/index.js",

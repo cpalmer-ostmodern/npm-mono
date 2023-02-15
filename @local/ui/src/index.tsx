@@ -8,6 +8,7 @@ import { ArticleGridWithTitle } from './components/organisms/article-grid-with-t
 import { ImageCarousel } from './components/organisms/image-carousel';
 import { MediaGrid } from './components/organisms/media-grid';
 import { VideoArticleBanner } from './components/organisms/video-article-banner';
+import { FeaturedArticle } from './components/organisms/featured-article';
 
 export {
   TopicButton,
@@ -20,4 +21,5 @@ export {
   ArticleGridWithTitle,
   MediaGrid,
   VideoArticleBanner,
+  FeaturedArticle,
 };

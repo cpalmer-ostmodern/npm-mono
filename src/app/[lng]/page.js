@@ -16,6 +16,7 @@ import {
   ArticleGridWithTitle,
   VideoArticleBanner,
   MediaGrid,
+  FeaturedArticle,
 } from 'srmg-dev-ui-003';
 
 import {
@@ -188,6 +189,29 @@ export default function Page({
               twArticleCategory="mt-4 text-right text-sm font-tertiary"
             ></ImageCarousel>
           </Suspense>
+        </section>
+        <section>
+          <FeaturedArticle
+            title="موضة"
+            articleLink="#"
+            articleCategory="مشاهير و موضة"
+            articleCategoryLink="#"
+            articleTitle="إطلالات النجمات في حفل توزيع جوائز GRAMMYs.. الفساتين ذات التصميمات التقليدية تسيطر"
+            articleExcerpt="شاهدوا أجمل إطلالات النجمات في حفل توزيع جوائز GRAMMYs جرامي، في نسخته الـ65، حيث اتسمت الإطلالات بكون تصميماتها تقليدية وبعيدة عن الغرابة ومن بين النجمات اللواتي تألقن وخطفن الأنظار، كانت جينيفر لوبيز وأديل وبيونسيه ودوجا كات وتايلور سويفت وكاردي بي وغيرهن"
+            articleAuthor="سما جابر"
+            articleImage="https://static.hiamag.com/styles/673x940/public/2023-02/063_1463248144_0.jpg?h=463e0f9c&itok=-RPq10to"
+            articleImageAlt=""
+            reverseOrder={false}
+            twBackground="bg-white py-10 lg:px-24 lg:py-24"
+            twWrapper="max-md:flex-col-reverse mt-8 xl:-mt-32 items-end flex justify-between gap-12 text-right text-neutral-800 xl:container px-6 xl:px-10 xl:mx-auto"
+            twTitle="font-primary font-bold text-5xl lg:text-8xl 2xl:text-9xl text-neutral-800"
+            twArticleTextWrapper="flex gap-y-6 flex-col max-w-2xl 2xl:pb-28"
+            twArticleCategory="font-tertiary"
+            twArticleTitle="text-4xl font-primary font-bold text-neutral-800"
+            twArticleExcerpt="font-secondary font-light text-lg"
+            twArticleAuthor="font-tertiary text-xs"
+            twArticleImage=""
+          />
         </section>
         <section className="max-w-container px-6 xl:mx-auto mb-24">
           <Suspense>
