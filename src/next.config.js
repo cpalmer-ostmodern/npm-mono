@@ -36,7 +36,7 @@ module.exports = {
                 'https://2s7jicu0rf.execute-api.eu-west-1.amazonaws.com/prod/lambda-a',
               );
 
-            console.log(response.body);
+            // console.log(response.body);
 
             const dt =
               await response.json();

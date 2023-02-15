@@ -175,20 +175,23 @@ const theme = require('tailwindcss/defaultConfig');
 let colors = null;
 
 const loop = (colors) => {
-  let res = [];
+  let c = {};
 
-  for (color in colors.colors) {
-    for (x in color) {
-    }
-
-    colors = {
-      ...colors,
-      [color]: {
-        100: 'text',
-      },
+  for (const [
+    key,
+    value,
+  ] of Object.entries(colors.colors)) {
+    c = {
+      ...c,
+      [key]:
+        key === 'black' ||
+        key === 'white'
+          ? value.value
+          : value,
     };
+
+    console.log(c);
   }
-  console.log(colors);
 };
 
 // Try and merge any colors styles with the selected theme
