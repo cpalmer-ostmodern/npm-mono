@@ -84,7 +84,9 @@ export function VideoArticleBanner({
       </div>
     </div>
   ) : (
-    <div className="text-center">No articles available</div>
+    <div className="text-center" data-testid="error-video-article-banner">
+      No articles available
+    </div>
   );
 }
 
