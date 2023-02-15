@@ -252,6 +252,52 @@ export default function Page({
             />
           </Suspense>
         </section>
+        <section>
+          <FeaturedArticle
+            title="جمال"
+            articleLink="#"
+            articleCategory="مشاهير وجمال"
+            articleCategoryLink="#"
+            articleTitle="أبرز الصيحات الجمالية الجديدة بأسلوب النجمات العالميات في حفل Grammy Awards.. استوحي منها"
+            articleExcerpt="عند شراء الأحجار الكريمة، ينصح الخبراء باختيار الأحجار الصلدة. في ما يلي قائمة بأحجار كريمة قوية تناسب ترصيع المجوهرات اليومية."
+            articleAuthor=""
+            articleImage="https://static.hiamag.com/styles/673x940/public/2023-02/1%20%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9%20%D8%A7%D8%B7%D9%84%D8%A7%D9%84%D8%A9%20Taylor%20Swift%D8%A8%D8%AA%D8%B3%D8%B1%D9%8A%D8%AD%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B4%D8%B9%D8%B1%20%D8%A7%D9%84%D9%85%D8%B1%D9%81%D9%88%D8%B9%D8%A9%20%D9%85%D8%B9%20%D8%A7%D9%84%D8%BA%D8%B1%D8%A9%20%D8%A7%D9%84%D8%A7%D9%85%D8%A7%D9%85%D9%8A%D8%A9%20%D8%A7%D9%84%D9%83%D8%AB%D9%8A%D9%81%D8%A9.jpg?h=69f2b9d0&itok=lpRTR3rO"
+            articleImageAlt=""
+            reverseOrder
+            twBackground="bg-beigetaupe-100 py-10 lg:px-24 lg:py-24"
+            twWrapper="max-md:flex-col-reverse mt-8 xl:-mt-32 items-end flex justify-between gap-12 text-right text-neutral-800 xl:container px-6 xl:px-10 xl:mx-auto"
+            twTitle="font-primary font-bold text-5xl lg:text-8xl 2xl:text-9xl text-neutral-800"
+            twArticleTextWrapper="flex gap-y-6 flex-col max-w-2xl 2xl:pb-28"
+            twArticleCategory="font-tertiary"
+            twArticleTitle="text-4xl font-primary font-bold text-neutral-800"
+            twArticleExcerpt="font-secondary font-light text-lg"
+            twArticleAuthor="font-tertiary text-xs"
+            twArticleImage=""
+          />
+        </section>
+        <section className="mb-16">
+          <FeaturedArticle
+            title="مجوهرات"
+            articleLink="#"
+            articleCategory="مجوهرات وساعات"
+            articleCategoryLink="#"
+            articleTitle="تعرفي على الأحجار الكريمة الصلبة التي تناسب إطلالاتك اليومية"
+            articleExcerpt="عند شراء الأحجار الكريمة، ينصح الخبراء باختيار الأحجار الصلدة. في ما يلي قائمة بأحجار كريمة قوية تناسب ترصيع المجوهرات اليومية."
+            articleAuthor="عبير شرارة"
+            articleImage="https://static.hiamag.com/styles/673x940/public/2023-02/WhatsApp%20Image%202023-02-02%20at%2010.56.18%20AM.jpeg?h=ccc2f15d&itok=8MIsiFE0"
+            articleImageAlt=""
+            reverseOrder
+            twBackground="bg-mauve-450 py-10 lg:px-24 lg:py-24"
+            twWrapper="max-md:flex-col-reverse mt-8 xl:-mt-32 items-end flex justify-between gap-12 text-right text-neutral-800 xl:container px-6 xl:px-10 xl:mx-auto"
+            twTitle="font-primary font-bold text-5xl lg:text-8xl 2xl:text-9xl text-neutral-800"
+            twArticleTextWrapper="flex gap-y-6 flex-col max-w-2xl 2xl:pb-28"
+            twArticleCategory="font-tertiary"
+            twArticleTitle="text-4xl font-primary font-bold text-neutral-800"
+            twArticleExcerpt="font-secondary font-light text-lg"
+            twArticleAuthor="font-tertiary text-xs"
+            twArticleImage=""
+          />
+        </section>
         <section className="mb-16">
           <Suspense>
             <MediaGrid
