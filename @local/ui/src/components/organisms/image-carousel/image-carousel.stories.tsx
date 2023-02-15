@@ -59,7 +59,7 @@ const articles_7 = [
 ];
 
 export default {
-  title: 'Components/ImageCarousel',
+  title: 'Components/Organisms/ImageCarousel',
   component: ImageCarousel,
   parameters: {
     layout: 'fullscreen',

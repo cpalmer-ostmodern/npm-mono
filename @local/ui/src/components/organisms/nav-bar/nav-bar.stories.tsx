@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import NavBar from './nav-bar.component';
 
 export default {
-  title: 'Components/NavBar',
+  title: 'Components/Organisms/NavBar',
   component: NavBar,
   parameters: {
     layout: 'fullscreen',
