@@ -48,7 +48,7 @@ export function ArticleGrid({
             topicName={buttonText}
             icon="icon icon-arrow-left"
             tw={twArticleButton}
-            size={'28px'}
+            size="28px"
           />
         </div>
       )}
