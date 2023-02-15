@@ -10,7 +10,7 @@ try {
   //   colors = [];
   console.log(e);
 }
-console.log(colors);
+// console.log(colors);
 
 module.exports = {
   // ...merge(theme),
@@ -19,6 +19,7 @@ module.exports = {
     'app/[lng]/**/*.{js,ts,jsx,tsx}',
     'app/[lng]/*.{js,ts,jsx,tsx}',
     'app/i18n/*.{js,ts,jsx,tsx}',
+    'app/i18n/page.js',
     'app/i18n/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {

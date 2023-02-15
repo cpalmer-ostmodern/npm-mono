@@ -4,8 +4,8 @@ import { createResponse } from '../shared/utils';
 export const handler = async (): Promise<APIGatewayProxyResult> => {
   const data = JSON.stringify({
     colors: {
-      black: '#ffffff',
-      white: '#000000',
+      black: '#212121',
+      white: '#1b73e8',
       grey: {
         100: '#9ea0a2',
       },
