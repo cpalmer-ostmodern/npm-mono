@@ -25,10 +25,10 @@ export function ArticleImage({
     >
       {link ? (
         <Link href={link}>
-          <img src={src} alt={alt} className="object-cover w-full" />
+          <img src={src} alt={alt} className="object-cover w-full h-full" />
         </Link>
       ) : (
-        <img src={src} alt={alt} className="object-cover w-full" />
+        <img src={src} alt={alt} className="object-cover w-full h-full" />
       )}
     </div>
   ) : null;

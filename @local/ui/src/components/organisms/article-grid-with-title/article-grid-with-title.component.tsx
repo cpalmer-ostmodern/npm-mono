@@ -1,9 +1,9 @@
-import React from "react";
-import { Article } from "../../molecules/article";
-import { ArticleTitle } from "../../atoms/article/article-title/article-title.component";
-import { TopicButton } from "../../atoms/button";
+import React from 'react';
+import { Article } from '../../molecules/article';
+import { ArticleTitle } from '../../atoms/article/article-title/article-title.component';
+import { TopicButton } from '../../atoms/button';
 
-import { ArticleGridProps } from "../article-grid/article-grid.types";
+import { ArticleGridProps } from '../article-grid/article-grid.types';
 
 /* eslint-disable-next-line */
 export interface ArticleGridWithTitleProps extends ArticleGridProps {
@@ -30,7 +30,7 @@ export function ArticleGridWithTitle({
   twGridTitle,
 }: ArticleGridWithTitleProps) {
   const setImageOrientation = (index: number) => {
-    return index % 2 ? "portrait" : "square";
+    return index % 2 ? 'portrait' : 'square';
   };
 
   /**
@@ -42,12 +42,12 @@ export function ArticleGridWithTitle({
   const calculateArticleOrderNumber = (
     rightAlignTitle: boolean,
     index: number,
-    columns: number
+    columns: number,
   ) => {
-    return rightAlignTitle && index < columns - 1 ? "1" : "3";
+    return rightAlignTitle && index < columns - 1 ? '1' : '3';
   };
 
-  return (
+  return articles ? (
     <>
       <div className="block md:hidden mb-8">
         <ArticleTitle title={title} titleLink={titleLink} tw={twGridTitle} />
@@ -56,7 +56,7 @@ export function ArticleGridWithTitle({
       <div className={`${twArticleGrid} grid-cols-${columns}`}>
         <div
           className={`hidden md:block md:order-${
-            titleRightAligned ? "2" : "1"
+            titleRightAligned ? '2' : '1'
           }`}
         >
           <ArticleTitle title={title} titleLink={titleLink} tw={twGridTitle} />
@@ -69,7 +69,7 @@ export function ArticleGridWithTitle({
               className={`max-md:min-w-80 order-${calculateArticleOrderNumber(
                 titleRightAligned,
                 index,
-                columns
+                columns,
               )}`}
             >
               <Article
@@ -96,11 +96,15 @@ export function ArticleGridWithTitle({
             topicName={buttonText}
             icon="icon icon-arrow-left"
             tw={twArticleButton}
-            size={"28px"}
+            size={'28px'}
           />
         </div>
       )}
     </>
+  ) : (
+    <div className="text-center" data-testid="error-article-grid-with-text">
+      No articles available
+    </div>
   );
 }
 
