@@ -84,5 +84,8 @@ Default.args = {
   columns: 12,
   articles: articles_7,
   twCarouselContainer: 'col-span-9 flex',
+  twArticleImg: 'w-full overflow-hidden',
+  twArticleTitle: 'text-xl font-primary font-medium text-right mt-4',
+  twArticleCategory: 'mt-4 text-right text-sm font-tertiary',
   title: 'اخترنا لكم',
 };
