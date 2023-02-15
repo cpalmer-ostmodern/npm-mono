@@ -17,6 +17,7 @@ import {
   VideoArticleBanner,
   MediaGrid,
   FeaturedArticle,
+  Hero,
 } from 'srmg-dev-ui-003';
 
 import {
@@ -273,6 +274,24 @@ export default function Page({
             twArticleExcerpt="font-secondary font-light text-lg"
             twArticleAuthor="font-tertiary text-xs"
             twArticleImage=""
+          />
+        </section>
+        <section>
+          <Hero
+            title="عروض أزياء مجموعات ربيع وصيف 2023"
+            tagline="Spring / Summer 2023 Fashion Shows"
+            link="#"
+            buttonText="المزيد"
+            bgImage="https://static.hiamag.com/styles/1680x729/public/2022-12/xxl1%20%281%29.jpeg?h=0d167294&itok=f1qpSL6A"
+            twTitle="text-3xl md:text-6xl xl:text-8xl font-primary md:font-bold !leading-tight"
+            twTagline="text-2xl lg:text-3xl font-quaternary"
+            twHeroContainer="
+              relative flex justify-center items-center
+              xl:container px-6 xl:px-10 mx-auto h-[80vh] md:h-[40vw]
+            "
+            twHeroWrapper="bg-cover bg-black text-white text-center md:text-right"
+            twHeroButtonBx="w-full left-0 md:left-10 absolute bottom-14"
+            twHeroButton="w-60 mx-auto md:mx-0 p-2 border border-white font-tertiary flex justify-between"
           />
         </section>
         <section className="mb-16">
