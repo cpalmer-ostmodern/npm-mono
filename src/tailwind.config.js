@@ -1,31 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 // tailwind.config.js
 
-// const merge = require('merge-deep');
-
-// const theme = require('tailwindcss/defaultConfig');
-// let colors = null;
-
-// const loop = (colors) => {
-//   let c = {};
-
-//   for (const [
-//     key,
-//     value,
-//   ] of Object.entries(colors.colors)) {
-//     c = {
-//       ...c,
-//       [key]:
-//         key === 'black' ||
-//         key === 'white'
-//           ? value.value
-//           : value,
-//     };
-
-//     console.log(c);
-//   }
-// };
-
 // Try and merge any colors styles with the selected theme
 colors = require('./.tmp/colors.json');
 try {

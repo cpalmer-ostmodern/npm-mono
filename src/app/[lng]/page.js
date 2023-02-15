@@ -170,7 +170,7 @@ export default function Page({
             />
           </Suspense>
         </section>
-        <section className="mb-16 text-center ml-20">
+        <section className="!mt-60">
           <Suspense>
             <ImageCarousel
               width={'100%'}
