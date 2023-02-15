@@ -38,7 +38,8 @@ try {
 console.log(colors);
 
 module.exports = {
-  // ...merge(theme, colors),
+  // ...merge(theme),
+  relative: true,
   content: [
     'app/[lng]/**/*.{js,ts,jsx,tsx}',
     'app/[lng]/*.{js,ts,jsx,tsx}',
@@ -46,39 +47,6 @@ module.exports = {
     'app/i18n/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {
-      aspectRatio: {
-        portrait: '3 / 4',
-      },
-      minWidth: {
-        80: '20rem',
-      },
-      maxWidth: {
-        container: '90rem',
-      },
-      width: {
-        480: '30rem',
-      },
-      colors: colors.colors,
-      fontFamily: {
-        primary: [
-          'Laureen Pro',
-          'serif',
-        ],
-        secondary: [
-          'Greta Arabic',
-          'sans-serif',
-        ],
-        tertiary: [
-          'Graphik Arabic',
-          'sans-serif',
-        ],
-        quaternary: [
-          'Saol Text',
-          'sans-serif',
-        ],
-      },
-    },
     plugins: [],
     safelist: [
       'grid',
@@ -160,6 +128,43 @@ module.exports = {
       'ml-10',
       'aspect-square',
       'aspect-portrait',
+      'xl:container',
+      'px-6',
+      'xl:px-10',
+      'xl:mx-auto',
     ],
+    extend: {
+      aspectRatio: {
+        portrait: '3 / 4',
+      },
+      minWidth: {
+        80: '20rem',
+      },
+      maxWidth: {
+        container: '90rem',
+      },
+      width: {
+        480: '30rem',
+      },
+      fontFamily: {
+        primary: [
+          'Laureen Pro',
+          'serif',
+        ],
+        secondary: [
+          'Greta Arabic',
+          'sans-serif',
+        ],
+        tertiary: [
+          'Graphik Arabic',
+          'sans-serif',
+        ],
+        quaternary: [
+          'Saol Text',
+          'sans-serif',
+        ],
+      },
+      colors: colors.colors,
+    },
   },
 };
