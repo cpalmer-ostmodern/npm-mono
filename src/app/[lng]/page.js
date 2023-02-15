@@ -14,14 +14,16 @@ import {
   ImageCarousel,
   ArticleGrid,
   ArticleGridWithTitle,
+  VideoArticleBanner,
   MediaGrid,
-} from 'srmg-dev-ui-001';
+} from 'srmg-dev-ui-003';
 
 import {
   articles,
   articles_7,
   media_articles,
   article_grid_7,
+  video_articles,
 } from '../../data/sample-articles';
 
 export default function Page({
@@ -202,6 +204,29 @@ export default function Page({
               twArticleButton="p-2 bg-white border font-tertiary border-black flex justify-between w-60 md:w-1/5"
               twArticleTitle="text-xl font-primary font-medium text-right mt-4"
               twArticleCategory="mt-4 text-right text-sm font-tertiary"
+            />
+          </Suspense>
+        </section>
+        <section>
+          <Suspense>
+            <VideoArticleBanner
+              articles={video_articles}
+              title="فيديو"
+              buttonText="المزيد"
+              twTitle="font-primary text-right font-bold text-5xl md:text-9xl mb-10 md:mb-20"
+              twArticleGrid="flex flex-col md:flex-row justify-between gap-y-12 md:gap-x-20 xl:gap-x-52"
+              twArticle=""
+              twArticleImg="aspect-video mb-4 relative"
+              twArticleImgIcon="absolute bottom-0 origin-bottom-left"
+              twPrimaryArticle="md:max-w-md"
+              twSecondaryArticle="lg:text-2xl"
+              twSecondaryArticleIconSize="scale-50"
+              twArticleButtonBx="mt-14"
+              twArticleButton="absolute p-2 border border-white flex justify-between w-48 font-tertiary"
+              twArticleTitle="font-primary text-right mb-2"
+              twArticleCategory="font-tertiary text-right"
+              twContainer="max-w-container px-6 xl:mx-auto mb-24"
+              twBackground="bg-zinc-800 text-white py-11"
             />
           </Suspense>
         </section>
