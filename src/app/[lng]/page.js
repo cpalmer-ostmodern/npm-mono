@@ -181,9 +181,7 @@ export default function Page({
               columns={12}
               direction="rtl"
               articles={articles_7}
-              twCarouselContainer={
-                'col-span-8 p-5'
-              }
+              twCarouselContainer="col-span-8 p-5"
               title={t('img-title')}
               twArticleImg="w-full overflow-hidden"
               twArticleTitle="text-xl font-primary font-medium text-right mt-4"

@@ -178,5 +178,6 @@ module.exports = {
     'text-right',
     'text-sm',
     'font-tertiary',
+    'lg:flex-row-reverse',
   ],
 };

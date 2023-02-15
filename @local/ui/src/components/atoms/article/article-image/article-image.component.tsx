@@ -17,6 +17,8 @@ export function ArticleImage({
   tw = '',
   link,
 }: ArticleImageProps) {
+  const imgClasses = 'object-cover w-full h-full';
+
   return src ? (
     <div
       className={`${tw} ${
@@ -25,10 +27,10 @@ export function ArticleImage({
     >
       {link ? (
         <Link href={link}>
-          <img src={src} alt={alt} className="object-cover w-full h-full" />
+          <img src={src} alt={alt} className={imgClasses} />
         </Link>
       ) : (
-        <img src={src} alt={alt} className="object-cover w-full h-full" />
+        <img src={src} alt={alt} className={imgClasses} />
       )}
     </div>
   ) : null;
