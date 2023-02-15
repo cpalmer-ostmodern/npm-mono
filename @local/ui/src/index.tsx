@@ -9,6 +9,7 @@ import { ImageCarousel } from './components/organisms/image-carousel';
 import { MediaGrid } from './components/organisms/media-grid';
 import { VideoArticleBanner } from './components/organisms/video-article-banner';
 import { FeaturedArticle } from './components/organisms/featured-article';
+import { Hero } from './components/organisms/hero';
 
 export {
   TopicButton,
@@ -22,4 +23,5 @@ export {
   MediaGrid,
   VideoArticleBanner,
   FeaturedArticle,
+  Hero,
 };
