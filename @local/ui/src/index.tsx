@@ -10,6 +10,7 @@ import { MediaGrid } from './components/organisms/media-grid';
 import { VideoArticleBanner } from './components/organisms/video-article-banner';
 import { FeaturedArticle } from './components/organisms/featured-article';
 import { Hero } from './components/organisms/hero';
+import { ArticleFeatureGrid } from './components/organisms/article-feature-grid';
 
 export {
   TopicButton,
@@ -24,4 +25,5 @@ export {
   VideoArticleBanner,
   FeaturedArticle,
   Hero,
+  ArticleFeatureGrid,
 };

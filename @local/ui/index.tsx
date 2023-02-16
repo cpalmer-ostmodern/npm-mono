@@ -10,6 +10,7 @@ import { MediaGrid } from './dist/lib';
 import { VideoArticleBanner } from './dist/lib';
 import { FeaturedArticle } from './dist/lib';
 import { Hero } from './dist/lib';
+import { ArticleFeatureGrid } from './dist/lib';
 export {
   TopicButton,
   Menu,
@@ -23,4 +24,5 @@ export {
   VideoArticleBanner,
   FeaturedArticle,
   Hero,
+  ArticleFeatureGrid,
 };
