@@ -11,6 +11,7 @@ import { VideoArticleBanner } from './dist/lib';
 import { FeaturedArticle } from './dist/lib';
 import { Hero } from './dist/lib';
 import { ArticleFeatureGrid } from './dist/lib';
+import { NewsletterBanner } from './dist/lib';
 export {
   TopicButton,
   Menu,
@@ -25,4 +26,5 @@ export {
   FeaturedArticle,
   Hero,
   ArticleFeatureGrid,
+  NewsletterBanner,
 };

@@ -180,5 +180,6 @@ module.exports = {
     'font-tertiary',
     'lg:flex-row-reverse',
     'md:self-center',
+    'h-full',
   ],
 };

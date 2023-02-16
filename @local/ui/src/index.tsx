@@ -11,6 +11,7 @@ import { VideoArticleBanner } from './components/organisms/video-article-banner'
 import { FeaturedArticle } from './components/organisms/featured-article';
 import { Hero } from './components/organisms/hero';
 import { ArticleFeatureGrid } from './components/organisms/article-feature-grid';
+import { NewsletterBanner } from './components/organisms/newsletter-banner';
 
 export {
   TopicButton,
@@ -26,4 +27,5 @@ export {
   FeaturedArticle,
   Hero,
   ArticleFeatureGrid,
+  NewsletterBanner,
 };
