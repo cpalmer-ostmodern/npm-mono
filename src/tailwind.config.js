@@ -182,5 +182,7 @@ module.exports = {
     'lg:flex-row-reverse',
     'md:self-center',
     'h-full',
+    'lg:hidden',
+    'lg:block',
   ],
 };

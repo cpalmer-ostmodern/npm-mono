@@ -12,6 +12,7 @@ import { FeaturedArticle } from './dist/lib';
 import { Hero } from './dist/lib';
 import { ArticleFeatureGrid } from './dist/lib';
 import { NewsletterBanner } from './dist/lib';
+import { Footer } from './dist/lib';
 export {
   TopicButton,
   Menu,
@@ -27,4 +28,5 @@ export {
   Hero,
   ArticleFeatureGrid,
   NewsletterBanner,
+  Footer,
 };
