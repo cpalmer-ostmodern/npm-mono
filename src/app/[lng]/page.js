@@ -18,11 +18,13 @@ import {
   MediaGrid,
   FeaturedArticle,
   Hero,
+  ArticleFeatureGrid,
 } from 'srmg-dev-ui-003';
 
 import {
   articles,
   articles_7,
+  articles_2,
   media_articles,
   article_grid_7,
   video_articles,
@@ -277,6 +279,23 @@ export default function Page({
           />
         </section>
         <section>
+          <ArticleFeatureGrid
+            articles={articles_2}
+            buttonText="المزيد"
+            reverseOrder
+            twArticleFeatureGridGrid="md:flex md:gap-12"
+            twArticleFeatureGridWrapper="grid grid-cols-1 md:grid-cols-2 gap-12"
+            twArticle=""
+            twArticleImg="w-full overflow-hidden"
+            twArticleButtonBx="flex justify-center items-center mt-14 lg:mt-0"
+            twArticleButton="p-2 border font-tertiary border-black flex justify-between w-40"
+            twArticleTitle="text-xl font-primary font-medium text-right mt-4"
+            twArticleCategory="mt-4 text-right text-sm font-tertiary"
+            twArticleFeatureGridBackground="bg-beigetaupe-100 py-14"
+            twArticleFeatureGridContainer="max-w-container px-6 xl:mx-auto"
+          />
+        </section>
+        <section>
           <Hero
             title="عروض أزياء مجموعات ربيع وصيف 2023"
             tagline="Spring / Summer 2023 Fashion Shows"
@@ -294,7 +313,7 @@ export default function Page({
             twHeroButton="w-60 mx-auto md:mx-0 p-2 border border-white font-tertiary flex justify-between"
           />
         </section>
-        <section className="mb-16">
+        <section>
           <FeaturedArticle
             title="مجوهرات"
             articleLink="#"
@@ -315,6 +334,21 @@ export default function Page({
             twArticleExcerpt="font-secondary font-light text-lg"
             twArticleAuthor="font-tertiary text-xs"
             twArticleImage=""
+          />
+          <ArticleFeatureGrid
+            articles={articles_2}
+            buttonText="المزيد"
+            reverseOrder
+            twArticleFeatureGridGrid="md:flex md:gap-12"
+            twArticleFeatureGridWrapper="grid grid-cols-1 md:grid-cols-2 gap-12"
+            twArticle=""
+            twArticleImg="w-full overflow-hidden"
+            twArticleButtonBx="flex justify-center items-center mt-14 lg:mt-0"
+            twArticleButton="p-2 border font-tertiary border-black flex justify-between w-40"
+            twArticleTitle="text-xl font-primary font-medium text-right mt-4"
+            twArticleCategory="mt-4 text-right text-sm font-tertiary"
+            twArticleFeatureGridBackground="bg-mauve-450 py-14"
+            twArticleFeatureGridContainer="max-w-container px-6 xl:mx-auto"
           />
         </section>
         <section className="mb-16">

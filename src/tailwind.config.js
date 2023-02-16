@@ -179,5 +179,6 @@ module.exports = {
     'text-sm',
     'font-tertiary',
     'lg:flex-row-reverse',
+    'md:self-center',
   ],
 };
