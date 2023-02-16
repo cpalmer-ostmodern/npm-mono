@@ -19,6 +19,7 @@ import {
   FeaturedArticle,
   Hero,
   ArticleFeatureGrid,
+  NewsletterBanner,
 } from 'srmg-dev-ui-003';
 
 import {
@@ -351,6 +352,26 @@ export default function Page({
             twArticleFeatureGridContainer="max-w-container px-6 xl:mx-auto"
           />
         </section>
+        <section>
+          <Suspense>
+            <NewsletterBanner
+              title="Newsletter"
+              text="اشترك في النشرة الإخبارية المتطورة لتقديم أفضل الأخبار لدينا بطريقة منظمة. حدد اهتماماتك للحصول على أفضل تجربة"
+              buttonText="إضافة"
+              twTitle="text-6xl md:text-7xl xl:text-9xl font-quaternary text-neutral-800"
+              twText="font-secondary text-right text-xl font-light mb-4"
+              twTitleWrapper="col-span-3 flex justify-end items-center"
+              twFormErrorMessage="text-red-600 font-primary"
+              twFormCheckbox="ml-3"
+              twFormCheckboxWrapper="flex gap-4 justify-end mb-16"
+              twFormButton="p-2 border font-tertiary border-black flex justify-between w-40"
+              twFormInput="w-full bg-transparent border-zinc-800 border-b text-right py-4"
+              twFormWrapper="col-span-2 text-right font-tertiary font-light"
+              twContainer="xl:container px-6 xl:px-10 xl:mx-auto flex flex-col-reverse gap-y-8 lg:grid md:grid-cols-5"
+              twBackground="bg-beigetaupe-100 py-24"
+            />
+          </Suspense>
+        </section>
         <section className="mb-16">
           <Suspense>
             <MediaGrid
@@ -359,7 +380,7 @@ export default function Page({
               articles={media_articles}
               columns={3}
               buttonText="المزيد"
-              twMediaBackground="bg-stone-200 py-10 lg:py-24"
+              twMediaBackground="bg-grey-50 py-10 lg:py-24"
               twMediaGridWrapper="xl:container px-6 xl:px-10 xl:mx-auto"
               twMediaTitle="w-full text-right text-5xl lg:text-9xl font-bold font-primary mt-4 md:mt-0 mb-14 text-neutral-800"
               twMediaItemGrid="grid grid-cols-1 gap-12"

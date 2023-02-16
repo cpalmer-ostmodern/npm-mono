@@ -39,6 +39,7 @@ module.exports = {
         },
         grey: {
           100: '#9ea0a2',
+          50: '#efeff0',
         },
         gold: {
           50: '#F7F3F0',
