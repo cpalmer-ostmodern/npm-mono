@@ -5,7 +5,7 @@ export const handler = async (): Promise<APIGatewayProxyResult> => {
   const data = JSON.stringify({
     colors: {
       black: '#212121',
-      white: '#1b73e8',
+      white: '#ac8469',
       grey: {
         100: '#9ea0a2',
       },
