@@ -6,25 +6,33 @@ import { BaseLink } from '../../molecules/menu/menu.types';
 
 export interface MenuLinkProps extends BaseLink {
   isParent?: boolean;
-};
+}
 
-export function MenuLink({isParent, href, name, openNewTab, children, tw}: MenuLinkProps) {
-
-  const classNames = `${tw} ${isParent ? 'text-4xl md:text-5xl' : 'text-2xl md:text-3xl'}`;
+export function MenuLink({
+  isParent,
+  href,
+  name,
+  openNewTab,
+  children,
+  tw,
+}: MenuLinkProps) {
+  const classNames = `${tw} ${
+    isParent ? 'text-4xl md:text-5xl' : 'text-2xl md:text-3xl'
+  }`;
 
   return (
     <>
-      {openNewTab &&
+      {openNewTab && (
         <ExternalLink openNewTab href={href} classes={classNames} name={name}>
           {children}
         </ExternalLink>
-      }
-  
-      {!openNewTab &&
-        <Link href={href}>
+      )}
+
+      {!openNewTab && (
+        <Link href={href ? href : '#'}>
           <span className={classNames}>{children}</span>
         </Link>
-      }
+      )}
     </>
   );
 }

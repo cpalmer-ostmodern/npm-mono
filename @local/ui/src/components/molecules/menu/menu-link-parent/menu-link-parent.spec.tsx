@@ -9,17 +9,15 @@ describe('MenuLinkParent', () => {
       <MenuLinkParent
         href=""
         openNewTab={false}
-        links={
-          [
-            {
-              href: 'https://www.hiamag.com/',
-              name: 'A link to the HIA Website',
-              openNewTab: true,
-              children: 'HIA Website'
-            }
-          ]
-        }
-      />
+        sublinks={[
+          {
+            href: 'https://www.hiamag.com/',
+            name: 'A link to the HIA Website',
+            openNewTab: true,
+            children: 'HIA Website',
+          },
+        ]}
+      />,
     );
     expect(baseElement).toBeTruthy();
   });

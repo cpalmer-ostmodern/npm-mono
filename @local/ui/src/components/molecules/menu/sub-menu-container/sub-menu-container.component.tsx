@@ -1,8 +1,6 @@
-import React from "react";
-import { BaseLink } from "../menu.types";
-import MenuLink from "../../../atoms/menu-link/menu-link.component";
-
-import ArrowLeftIconSVG from "../../../assets/icons/arrow-left";
+import React from 'react';
+import { BaseLink } from '../menu.types';
+import MenuLink from '../../../atoms/menu-link/menu-link.component';
 
 /* eslint-disable-next-line */
 export interface SubMenuContainerProps {
@@ -18,7 +16,7 @@ export function SubMenuContainer({
 }: SubMenuContainerProps) {
   return (
     <ul
-      className={`${twMenuSubLinkWrapper} md:before:bg-[url('${ArrowLeftIconSVG}')]`}
+      className={`${twMenuSubLinkWrapper} md:before:bg-[url('ArrowLeftIconSVG')] menu-link__parent`}
     >
       {links?.map((link, index) => {
         return (
