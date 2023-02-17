@@ -2,7 +2,7 @@ import React from 'react';
 
 /* eslint-disable-next-line */
 export interface SubMenuCounterProps {
-  totalLinks: number | undefined;
+  totalLinks?: number | undefined;
   tw?: string;
 }
 
