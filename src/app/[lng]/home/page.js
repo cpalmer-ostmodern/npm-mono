@@ -1,7 +1,10 @@
-"use client";
-import { useState, useEffect } from "react";
-import { useTranslation } from "../../i18n/home";
-import { Footer } from "../components/Footer/client";
+'use client';
+import {
+  useState,
+  useEffect,
+} from 'react';
+import { useTranslation } from '../../i18n/home';
+import { Footer } from '../components/Footer/client';
 
 import {
   NavBar,
@@ -10,16 +13,19 @@ import {
   ArticleGrid,
   ArticleGridWithTitle,
   MediaGrid,
-} from "srmg-dev-ui-001";
+} from 'srmg-dev-ui-003';
 
 import {
   articles,
   articles_7,
   media_articles,
-} from "../../../data/sample-articles";
+} from '../../../data/sample-articles';
 
-export default function Page({ params: { lng } }) {
-  const [scrollY, setScrollY] = useState(0);
+export default function Page({
+  params: { lng },
+}) {
+  const [scrollY, setScrollY] =
+    useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,30 +34,40 @@ export default function Page({ params: { lng } }) {
 
     handleScroll();
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener(
+      'scroll',
+      handleScroll,
+    );
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener(
+        'scroll',
+        handleScroll,
+      );
     };
   }, []);
 
   const navLinks = [
-    { name: "موضة", href: "#" },
-    { name: "جمال", href: "#" },
-    { name: "ترفيه وفنون", href: "#" },
-    { name: "لايف ستايل", href: "#" },
-    { name: "أخبار", href: "#" },
-    { name: "فيديو", href: "#" },
-    { name: "بودكاست", href: "#" },
+    { name: 'موضة', href: '#' },
+    { name: 'جمال', href: '#' },
+    { name: 'ترفيه وفنون', href: '#' },
+    { name: 'لايف ستايل', href: '#' },
+    { name: 'أخبار', href: '#' },
+    { name: 'فيديو', href: '#' },
+    { name: 'بودكاست', href: '#' },
   ];
 
-  const { t } = useTranslation(lng, "client-page");
+  const { t } = useTranslation(
+    lng,
+    'client-page',
+  );
 
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] =
+    useState(0);
 
   const imgCaption = {
-    title: "اخترنا لكم",
-    body: "Luminous Fantasy روعة البدايات الجديدة مع Van Cleef & Arpels",
+    title: 'اخترنا لكم',
+    body: 'Luminous Fantasy روعة البدايات الجديدة مع Van Cleef & Arpels',
   };
 
   return (
@@ -60,14 +76,22 @@ export default function Page({ params: { lng } }) {
         <section>
           <header
             className={`z-30 visible md:hidden fixed w-full bg-white ease-in ${
-              scrollY === 0 ? "h-28" : "h-20"
+              scrollY === 0
+                ? 'h-28'
+                : 'h-20'
             }`}
           >
             {/* <div className="fixed">{scrollY}</div> */}
             <NavBar
-              sSize={"23px"}
-              logoSize={scrollY === 0 ? 56 : 33}
-              logoTxt={scrollY === 0 ? true : false}
+              sSize={'23px'}
+              logoSize={
+                scrollY === 0 ? 56 : 33
+              }
+              logoTxt={
+                scrollY === 0
+                  ? true
+                  : false
+              }
               tw="relative pl-7 pr-5 pt-3 pb-4 md:pt-4 md:px-10 md:pb-5 bg-white lg:px-20 flex justify-between w-100 sticky"
               twMenuOverlay="-z-10 p-5 bg-gold-500 min-h-screen flex justify-center items-center absolute left-0 top-0 w-full"
               twSearchOverlay="-z-10 p-5 bg-neutral-400 min-h-screen flex justify-center items-center absolute left-0 top-0 w-full"
@@ -75,13 +99,17 @@ export default function Page({ params: { lng } }) {
           </header>
           <header
             className={`z-30 collapse fixed md:visible w-full bg-white ease-in ${
-              scrollY === 0 ? "h-30" : "h-28"
+              scrollY === 0
+                ? 'h-30'
+                : 'h-28'
             }`}
           >
             {/* <div className="fixed">{scrollY}</div> */}
             <NavBar
-              sSize={"23px"}
-              logoSize={scrollY === 0 ? 72 : 56}
+              sSize={'23px'}
+              logoSize={
+                scrollY === 0 ? 72 : 56
+              }
               logoTxt
               tw="relative pl-7 pr-5 pt-3 pb-4 md:pt-4 md:px-10 md:pb-5 bg-white lg:px-20 flex justify-between w-100 sticky"
               twMenuOverlay="-z-10 p-5 bg-gold-500 min-h-screen flex justify-center items-center absolute left-0 top-0 w-full"
@@ -174,7 +202,10 @@ export default function Page({ params: { lng } }) {
           />
         </section>
       </main>
-      <Footer lng={lng} path="/client-page" />
+      <Footer
+        lng={lng}
+        path="/client-page"
+      />
     </>
   );
 }

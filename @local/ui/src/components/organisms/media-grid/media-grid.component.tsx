@@ -41,7 +41,7 @@ export function MediaGrid({
   twMediaGridWrapper,
 }: MediaGridProps) {
   return (
-    <div className={`${twMediaBackground}`}>
+    <div className={twMediaBackground}>
       <div className={twMediaGridWrapper}>
         <Link href={titleLink ? titleLink : '#'}>
           <h2 className={twMediaTitle}>{title}</h2>
@@ -73,7 +73,7 @@ export function MediaGrid({
               topicName={buttonText}
               icon="icon icon-arrow-left"
               tw={twMediaButton}
-              size={'28px'}
+              size="28px"
             />
           </div>
         )}

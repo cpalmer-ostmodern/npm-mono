@@ -1,29 +1,22 @@
-import React, { useState } from "react";
-import { BaseLink } from "../menu.types";
+import React, { useState } from 'react';
+import { SubMenuContainer } from '../sub-menu-container/sub-menu-container.component';
+import { SubMenuCounter } from '../../../atoms/sub-menu-counter/sub-menu-counter.component';
+import { MenuLink } from '../../../atoms/menu-link/menu-link.component';
+import { BaseLinkParent } from '../menu.types';
 
-import { SubMenuContainer } from "../sub-menu-container/sub-menu-container.component";
-import { SubMenuCounter } from "../../../atoms/sub-menu-counter/sub-menu-counter.component";
-import { MenuLink } from "../../../atoms/menu-link/menu-link.component";
-
-import ArrowLeftIconSVG from "../../../assets/icons/arrow-left";
-
-export interface BaseParentLink {
-  links?: BaseLink[];
+export interface MenuLinkParentProps extends BaseLinkParent {
   twMenuSubLink?: string;
   twMenuSubLinkCounter?: string;
   twMenuSubLinkWrapper?: string;
   twMenuParentLinkWrapper?: string;
 }
 
-/* eslint-disable-next-line */
-export type MenuLinkParentProps = Partial<BaseLink> & BaseParentLink;
-
 export function MenuLinkParent({
   href,
   name,
   openNewTab,
   children,
-  links,
+  sublinks,
   twMenuSubLink,
   twMenuSubLinkCounter,
   twMenuSubLinkWrapper,
@@ -39,11 +32,12 @@ export function MenuLinkParent({
     setSubLinksVisible(false);
   };
 
+  const hasSubLinks = sublinks;
+
   const totalSubLinks = () => {
-    if (links && links.length > 0) {
-      return links.length;
+    if (sublinks) {
+      return sublinks.length;
     }
-    return 0;
   };
 
   return (
@@ -52,31 +46,32 @@ export function MenuLinkParent({
       onMouseLeave={handleMenuLinkLeave}
       className={`
         ${twMenuParentLinkWrapper}
-        ${sublinksVisible ? "before:rotate-90" : "before:-rotate-90"}
-        before:bg-[url('${ArrowLeftIconSVG}')]
+        ${sublinksVisible ? 'before:rotate-90' : 'before:-rotate-90'}
+        ${
+          hasSubLinks
+            ? `before:bg-[url('ArrowLeftIconSVG')] menu-link__parent`
+            : ''
+        }
       `}
     >
       <div>
-        {links && links.length > 0 && (
+        {hasSubLinks && (
           <SubMenuCounter
             totalLinks={totalSubLinks()}
             tw={twMenuSubLinkCounter}
           />
         )}
 
-        <MenuLink
-          isParent
-          href={href ? href : "#"}
-          name={name}
-          openNewTab={openNewTab ? openNewTab : true}
-        >
-          {children ? children : ""}
-        </MenuLink>
+        {children && (
+          <MenuLink isParent href={href} name={name} openNewTab={openNewTab}>
+            {children}
+          </MenuLink>
+        )}
       </div>
 
-      {links && links.length > 0 && sublinksVisible && (
+      {hasSubLinks && sublinksVisible && (
         <SubMenuContainer
-          links={links}
+          links={sublinks}
           twMenuSubLink={twMenuSubLink}
           twMenuSubLinkWrapper={twMenuSubLinkWrapper}
         />

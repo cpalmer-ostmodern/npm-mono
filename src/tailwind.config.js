@@ -23,8 +23,23 @@ module.exports = {
         480: '30rem',
       },
       colors: {
+        beigetaupe: {
+          100: '#E9E3E0',
+        },
+        mauve: {
+          50: '#F4F1F2',
+          100: '#E8E3E5',
+          200: '#D2C8CC',
+          300: '#BBACB2',
+          400: '#A59199',
+          450: '#99838C',
+          500: '#8E757F',
+          600: '#725E66',
+          700: '#55464C',
+        },
         grey: {
           100: '#9ea0a2',
+          50: '#efeff0',
         },
         gold: {
           50: '#F7F3F0',
@@ -164,5 +179,12 @@ module.exports = {
     'text-right',
     'text-sm',
     'font-tertiary',
+    'lg:flex-row-reverse',
+    'md:self-center',
+    'h-full',
+    'lg:hidden',
+    'lg:block',
+    'md:hidden',
+    'md:justify-between',
   ],
 };

@@ -19,7 +19,7 @@ export function ImageCarousel({
   const setImageOrientation = (index: number) => {
     return index % 2 ? 'square' : 'portrait';
   };
-  return (
+  return articles ? (
     <section className="!mt-60">
       <div className={`grid grid-cols-${columns}`}>
         <div className={`${twCarouselContainer}`}>
@@ -75,5 +75,9 @@ export function ImageCarousel({
         </div>
       </div>
     </section>
+  ) : (
+    <div className="text-center" data-testid="error-image-carousel">
+      No articles available
+    </div>
   );
 }
