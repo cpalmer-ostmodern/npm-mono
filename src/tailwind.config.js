@@ -184,5 +184,7 @@ module.exports = {
     'h-full',
     'lg:hidden',
     'lg:block',
+    'md:hidden',
+    'md:justify-between',
   ],
 };
