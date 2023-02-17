@@ -30,6 +30,8 @@ import {
   video_articles,
 } from '../../data/sample-articles';
 
+import { hamburger_links } from '../../data/menu-links';
+
 export default function Page({
   params: { lng },
 }) {
@@ -117,8 +119,27 @@ export default function Page({
                     : `-mt-[2rem] mb-0`
                 }
                 tw="relative pl-7 pr-5 pt-3 pb-4 md:pt-4 md:px-10 md:pb-5 bg-white lg:px-20 flex justify-between w-100 sticky"
-                twMenuOverlay="-z-10 p-5 bg-gold-500 min-h-screen flex justify-center items-center absolute left-0 top-0 w-full"
+                links={hamburger_links}
+                magazineCoverImage="https://static.hiamag.com/styles/640xauto/public/2023-01/JAN%20338%20SP-Final_page-0001.jpg?itok=qP0PInVl"
+                magazineIssueNumber="338"
+                magazineIssueDetails="عدد سبتمبر 2022"
+                twNavLinks="font-tertiary bg-white sm:hidden md:flex -mt-2 pt-2 pb-5 pr-20 pl-20 flex justify-center w-100 flex flex-row content-between space-x-12 text-lg"
+                twMagazineCoverImage="max-w-[158px] md:max-w-sm md:p-5 lg:p-16 md:border border-gold-600"
+                twMagazineIssueText="font-quaternary md:self-end"
+                twMagazineIssueNumber="font-quaternary text-5xl"
+                twMagazineWrapper="max-md:flex max-md:flex-row-reverse max-md:px-6 max-md:pb-8 max-md:border-b max-md:border-black max-md:flex max-md:justify-between max-md:gap-4"
                 twSearchOverlay="-z-10 p-5 bg-neutral-400 min-h-screen flex justify-center items-center absolute left-0 top-0 w-full"
+                twMenuOverlay="block h-screen md:flex justify-between w-full -z-10 md:p-5 pt-32 md:pt-40 bg-gold-500 min-h-screen absolute left-0 top-0 w-full overflow-y-scroll"
+                twMenuLinksWrapper="flex flex-col gap-8 relative w-full md:max-w-lg xl:max-w-none xl:w-480 text-right px-8 md:px-0 max-md:border-b border-black pb-12 md:pb-0"
+                twMenuContentWrapper="max-w-container md:px-6 xl:mx-auto flex flex-col-reverse md:flex-row gap-8 md:gap-20 w-full justify-between md:border-t border-black pt-9"
+                twMenuParentLinkWrapper="font-bold font-primary relative block w-full cursor-pointer
+                  xl:before:content-none before:content-[''] before:bg-left before:absolute before:w-6 before:h-6 before:left-0 before:transform-gpu before:origin-center translate-y-2 before:duration-200 before:ease-in-out
+                "
+                twMenuSubLink="text-zinc-900 inline-block hover:underline"
+                twMenuSubLinkCounter="font-primary inline pr-2 text-xs text-white"
+                twMenuSubLinkWrapper="font-primary relative mt-4 pr-20 flex flex-col gap-2
+                  xl:pr-0 xl:w-full xl:absolute xl:top-0 xl:right-full xl:before:content-[''] xl:before:absolute xl:before:w-12 xl:before:h-9 xl:before:-right-16
+                "
               />
             </header>
             <header
@@ -140,11 +161,31 @@ export default function Page({
                     ? `mb-[2rem] -mt-[0.75rem]`
                     : `-mt-[2rem] mb-0`
                 }
+                logoTxt
+                tw="relative pl-7 pr-5 pt-3 pb-4 md:pt-4 md:px-10 md:pb-5 bg-white lg:px-20 flex justify-between w-100 sticky"
                 menuIconSize={38}
                 searchIconSize={28}
-                tw="relative pl-7 pr-5 pt-3 pb-4 md:pt-4 md:px-10 md:pb-5 bg-white lg:px-20 flex justify-between w-100 sticky"
-                twMenuOverlay="-z-10 p-5 bg-gold-500 min-h-screen flex justify-center items-center absolute left-0 top-0 w-full"
+                links={hamburger_links}
+                magazineCoverImage="https://static.hiamag.com/styles/640xauto/public/2023-01/JAN%20338%20SP-Final_page-0001.jpg?itok=qP0PInVl"
+                magazineIssueNumber="338"
+                magazineIssueDetails="عدد سبتمبر 2022"
+                twNavLinks="font-tertiary bg-white sm:hidden md:flex -mt-2 pt-2 pb-5 pr-20 pl-20 flex justify-center w-100 flex flex-row content-between space-x-12 text-lg"
+                twMagazineCoverImage="max-w-[158px] md:max-w-sm md:p-5 lg:p-16 md:border border-gold-600"
+                twMagazineIssueText="font-quaternary md:self-end"
+                twMagazineIssueNumber="font-quaternary text-5xl"
+                twMagazineWrapper="max-md:flex max-md:flex-row-reverse max-md:px-6 max-md:pb-8 max-md:border-b max-md:border-black max-md:flex max-md:justify-between max-md:gap-4"
                 twSearchOverlay="-z-10 p-5 bg-neutral-400 min-h-screen flex justify-center items-center absolute left-0 top-0 w-full"
+                twMenuOverlay="block h-screen md:flex justify-between w-full -z-10 md:p-5 pt-32 md:pt-40 bg-gold-500 min-h-screen absolute left-0 top-0 w-full overflow-y-scroll"
+                twMenuLinksWrapper="flex flex-col gap-8 relative w-full md:max-w-lg xl:max-w-none xl:w-480 text-right px-8 md:px-0 max-md:border-b border-black pb-12 md:pb-0"
+                twMenuContentWrapper="max-w-container md:px-6 xl:mx-auto flex flex-col-reverse md:flex-row gap-8 md:gap-20 w-full justify-between md:border-t border-black pt-9"
+                twMenuParentLinkWrapper="font-bold font-primary relative block w-full cursor-pointer
+                  xl:before:content-none before:content-[''] before:bg-left before:absolute before:w-6 before:h-6 before:left-0 before:transform-gpu before:origin-center translate-y-2 before:duration-200 before:ease-in-out
+                "
+                twMenuSubLink="text-zinc-900 inline-block hover:underline"
+                twMenuSubLinkCounter="font-primary inline pr-2 text-xs text-white"
+                twMenuSubLinkWrapper="font-primary relative mt-4 pr-20 flex flex-col gap-2
+                  xl:pr-0 xl:w-full xl:absolute xl:top-0 xl:right-full xl:before:content-[''] xl:before:absolute xl:before:w-12 xl:before:h-9 xl:before:-right-16
+                "
               />
               <NavLinks
                 tw="bg-white sm:hidden md:flex -mt-2 pt-2 pb-5 pr-20 pl-20 flex justify-center w-100 flex flex-row content-between space-x-12 font-tertiary font-lg line-height-[22px]"
