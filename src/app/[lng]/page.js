@@ -5,7 +5,6 @@ import {
   Suspense,
 } from 'react';
 import { useTranslation } from '../i18n/home';
-import { Footer } from './components/Footer/client';
 
 import {
   NavBar,
@@ -415,10 +414,6 @@ export default function Page({
           </Suspense>
         </section>
       </main>
-      <Footer
-        lng={lng}
-        path="/client-page"
-      />
     </>
   );
 }
