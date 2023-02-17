@@ -42,6 +42,7 @@ export function ImageCarousel({
   const setImageOrientation = (index: number) => {
     return index % 2 ? 'square' : 'portrait';
   };
+
   return articles ? (
     <section className={twImageCarouselWrapper}>
       <div className={twImageCarouselGrid}>
