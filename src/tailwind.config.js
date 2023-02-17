@@ -22,6 +22,10 @@ module.exports = {
       width: {
         480: '30rem',
       },
+      padding: {
+        carousel:
+          'calc((100vw - 1392px)/2)',
+      },
       colors: {
         beigetaupe: {
           100: '#E9E3E0',

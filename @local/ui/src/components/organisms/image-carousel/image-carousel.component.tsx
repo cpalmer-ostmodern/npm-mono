@@ -70,20 +70,18 @@ export function ImageCarousel({
               {articles &&
                 articles.map((article, index) => (
                   <SplideSlide key={`article-${index}`}>
-                    <div>
-                      <Article
-                        thumbnail={article.thumbnail}
-                        title={article.title}
-                        category={article.category}
-                        imageAlt={article.imageAlt}
-                        imageOrientation={setImageOrientation(index)}
-                        link={article.link}
-                        tw={twArticle}
-                        twImg={twArticleImg}
-                        twTitle={twArticleTitle}
-                        twCategory={twArticleCategory}
-                      />
-                    </div>
+                    <Article
+                      thumbnail={article.thumbnail}
+                      title={article.title}
+                      category={article.category}
+                      imageAlt={article.imageAlt}
+                      imageOrientation={setImageOrientation(index)}
+                      link={article.link}
+                      tw={twArticle}
+                      twImg={twArticleImg}
+                      twTitle={twArticleTitle}
+                      twCategory={twArticleCategory}
+                    />
                   </SplideSlide>
                 ))}
             </SplideTrack>
