@@ -33,7 +33,7 @@ module.exports = {
             // 'https://2s7jicu0rf.execute-api.eu-west-1.amazonaws.com/prod/lambda-b',
             const response =
               await fetch(
-                'https://2s7jicu0rf.execute-api.eu-west-1.amazonaws.com/prod/lambda-a',
+                'https://2s7jicu0rf.execute-api.eu-west-1.amazonaws.com/prod/lambda-b',
               );
 
             console.log(response.body);
