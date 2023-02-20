@@ -23,14 +23,12 @@ module.exports = {
       process.env.NODE_ENV !==
       'development'
     ) {
-      // console.log(config);
       config.plugins.push(
         new WebpackBeforeBuildPlugin(
           async function (
             stats,
             callback,
           ) {
-            // 'https://2s7jicu0rf.execute-api.eu-west-1.amazonaws.com/prod/lambda-b',
             const response =
               await fetch(
                 'https://2s7jicu0rf.execute-api.eu-west-1.amazonaws.com/prod/lambda-a',
