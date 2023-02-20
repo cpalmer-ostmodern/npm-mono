@@ -1,9 +1,8 @@
 {
-  "name": "srmg-dev-ui-001",
-  "version": "0.1.32",
+  "name": "srmg-dev-ui-003",
+  "version": "0.1.45",
   "description": "This library is made of components.",
   "author": "Ostmodern",
-  "private": false,
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -66,7 +65,7 @@
     "@storybook/testing-library": "^0.0.13",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^27.5.2",
     "@types/leaflet": "^1.7.11",
     "@types/node": "^16.11.43",
@@ -74,6 +73,7 @@
     "@types/react-dom": "^18.0.6",
     "@types/react-leaflet": "^2.8.2",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "formik": "^2.2.9",
     "leaflet": "^1.8.0",
     "postcss": "^8.4.14",
     "prop-types": "^15.8.1",
@@ -89,6 +89,7 @@
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4",
     "webpack": "^5.73.0"
+    "yup": "^1.0.0"
   },
   "peerDependencies": {
     "@types/leaflet": "^1.7.11",

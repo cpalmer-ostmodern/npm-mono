@@ -19,7 +19,7 @@ export function ArticleGrid({
     return index % 2 ? 'portrait' : 'square';
   };
 
-  return (
+  return articles ? (
     <>
       <div className={`${twArticleGrid} md:grid-cols-${columns}`}>
         {articles.map((article, index) => {
@@ -48,11 +48,15 @@ export function ArticleGrid({
             topicName={buttonText}
             icon="icon icon-arrow-left"
             tw={twArticleButton}
-            size={'28px'}
+            size="28px"
           />
         </div>
       )}
     </>
+  ) : (
+    <div className="text-center" data-testid="error-article-grid">
+      No articles available
+    </div>
   );
 }
 
