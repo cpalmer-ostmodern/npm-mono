@@ -1,11 +1,56 @@
+const WebpackBeforeBuildPlugin = require('before-build-webpack');
+const fs = require('fs');
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
-  swcMinify: true,
+module.exports = {
+  reactStrictMode: true,
   experimental: {
     // Required:
-    appDir: true
-  }
-}
+    appDir: true,
+  },
+  webpack: (
+    config,
+    {
+      buildId,
+      dev,
+      isServer,
+      defaultLoaders,
+      nextRuntime,
+      webpack,
+    },
+  ) => {
+    if (
+      process.env.NODE_ENV !==
+      'development'
+    ) {
+      config.plugins.push(
+        new WebpackBeforeBuildPlugin(
+          async function (
+            stats,
+            callback,
+          ) {
+            const response =
+              await fetch(
+                'https://2s7jicu0rf.execute-api.eu-west-1.amazonaws.com/prod/lambda-a',
+              );
 
-module.exports = nextConfig
+            console.log(response.body);
+
+            const dt =
+              await response.json();
+
+            fs.writeFileSync(
+              './.tmp/colors.json',
+              JSON.stringify(dt),
+            );
+
+            callback();
+          },
+        ),
+      );
+    } else {
+      // do nothing - config has loaded
+    }
+    return config;
+  },
+};

@@ -12,6 +12,10 @@ export default {
         component: 'Primary Nav Bar for the Navigation Bar Component Header',
       },
     },
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/ygk0oSBD2VRnzmaDu5Fgtb/Hia---Production-UX?node-id=209%3A614&t=1YLKHjy0KIHSoEt5-1',
+    },
   },
 } as ComponentMeta<typeof NavBar>;
 

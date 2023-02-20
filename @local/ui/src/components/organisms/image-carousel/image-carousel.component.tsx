@@ -1,29 +1,54 @@
 import React from 'react';
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import { Article } from '../../molecules/article';
+import { IArticle } from '../../molecules/article/article.types';
+
+export interface ImageCarouselProps {
+  articles?: IArticle[];
+  title?: string;
+  width?: string;
+  height?: string;
+  gap?: string;
+  direction?: 'rtl' | 'ltr' | 'ttb' | undefined;
+  twArticle?: string;
+  twArticleImg?: string;
+  twArticleTitle?: string;
+  twArticleCategory?: string;
+  twImageCarouselTitle?: string;
+  twImageCarouselGrid?: string;
+  twCarouselContainer?: string;
+  twSplideWrapper?: string;
+  twMobileArticlesWrapper?: string;
+  twImageCarouselWrapper?: string;
+}
 
 export function ImageCarousel({
   width,
   height,
   gap,
   direction,
-  columns = 12,
   articles,
   title,
-  twCarouselContainer,
+  twImageCarouselTitle,
+  twImageCarouselGrid,
+  twImageCarouselWrapper,
+  twSplideWrapper,
+  twMobileArticlesWrapper,
   twArticleImg,
   twArticleTitle,
   twArticle,
   twArticleCategory,
-}: any) {
+}: ImageCarouselProps) {
   const setImageOrientation = (index: number) => {
     return index % 2 ? 'square' : 'portrait';
   };
+
   return articles ? (
-    <section className="!mt-60">
-      <div className={`grid grid-cols-${columns}`}>
-        <div className={`${twCarouselContainer}`}>
+    <section className={twImageCarouselWrapper}>
+      <div className={twImageCarouselGrid}>
+        <div className={twSplideWrapper}>
           <Splide
+            className="col-span-2 relative flex"
             hasTrack={false}
             onArrowsMounted={(splide, prev, next) => {
               console.log(prev, next);
@@ -44,34 +69,48 @@ export function ImageCarousel({
           >
             <SplideTrack id="splide01-track">
               {articles &&
-                articles.map((article: any, index: number) => (
+                articles.map((article, index) => (
                   <SplideSlide key={`article-${index}`}>
-                    <div>
-                      <Article
-                        thumbnail={article.thumbnail}
-                        title={article.title}
-                        category={article.category}
-                        imageAlt={article.imageAlt}
-                        imageOrientation={setImageOrientation(index)}
-                        link={article.link}
-                        tw={twArticle}
-                        twImg={twArticleImg}
-                        twTitle={twArticleTitle}
-                        twCategory={twArticleCategory}
-                      />
-                    </div>
+                    <Article
+                      thumbnail={article.thumbnail}
+                      title={article.title}
+                      category={article.category}
+                      imageAlt={article.imageAlt}
+                      imageOrientation={setImageOrientation(index)}
+                      link={article.link}
+                      tw={twArticle}
+                      twImg={twArticleImg}
+                      twTitle={twArticleTitle}
+                      twCategory={twArticleCategory}
+                    />
                   </SplideSlide>
                 ))}
             </SplideTrack>
           </Splide>
         </div>
-        <div className="col-span-3">
-          <h2
-            id="chosen-articles"
-            className="text-right font-bold font-primary text-9xl text-grey-100"
-          >
+        <div className="col-span-1">
+          <h2 id="chosen-articles" className={twImageCarouselTitle}>
             {title}
           </h2>
+        </div>
+        <div className={twMobileArticlesWrapper}>
+          {articles.map((article, index) => {
+            return (
+              <Article
+                key={`article-${index}`}
+                thumbnail={article.thumbnail}
+                title={article.title}
+                category={article.category}
+                imageOrientation={setImageOrientation(index)}
+                imageAlt={article.imageAlt}
+                link={article.link}
+                tw={twArticle}
+                twImg={twArticleImg}
+                twTitle={twArticleTitle}
+                twCategory={twArticleCategory}
+              />
+            );
+          })}
         </div>
       </div>
     </section>

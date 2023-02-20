@@ -1,10 +1,10 @@
-import { APIGatewayProxyResult } from "aws-lambda";
-import { toUpper } from "ramda";
+import { APIGatewayProxyResult } from 'aws-lambda';
+import { toUpper } from 'ramda';
 
 export const createResponse = (
   code: number,
-  name: string
+  data: any,
 ): APIGatewayProxyResult => ({
   statusCode: code,
-  body: `This is ${toUpper(name)}`,
+  body: data,
 });

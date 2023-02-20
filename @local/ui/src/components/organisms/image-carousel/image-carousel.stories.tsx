@@ -72,20 +72,26 @@ export default {
 } as ComponentMeta<typeof ImageCarousel>;
 
 const Template: ComponentStory<typeof ImageCarousel> = (args) => (
-  <ImageCarousel {...args} />
+  <ImageCarousel {...args} articles={articles_7} />
 );
 
 export const Default = Template.bind({});
 Default.args = {
   width: '100%',
-  height: 'auto',
+  height: '100%',
   gap: '3rem',
   direction: 'rtl',
-  columns: 12,
-  articles: articles_7,
-  twCarouselContainer: 'col-span-9 flex',
+  twArticle: 'mb-10',
   twArticleImg: 'w-full overflow-hidden',
+  twMobileArticlesWrapper:
+    'block md:hidden max-w-container px-6 xl:mx-auto mb-24',
   twArticleTitle: 'text-xl font-primary font-medium text-right mt-4',
+  twSplideWrapper: 'hidden md:block col-span-3',
   twArticleCategory: 'mt-4 text-right text-sm font-tertiary',
+  twImageCarouselTitle:
+    'text-right font-primary font-bold text-neutral-400 text-5xl lg:text-7xl xl:text-9xl mb-8 md:mb-0',
+  twImageCarouselGrid: 'md:grid grid-cols-4',
+  twCarouselContainer: 'col-span-9 flex',
+  twImageCarouselWrapper: 'relative block mb-[3vh] pr-carousel',
   title: 'اخترنا لكم',
 };

@@ -198,7 +198,7 @@ export default function Page({
         <section>
           <div className="md:h-48 h-[10vh] w-full"></div>
         </section>
-        <section className="relative">
+        <section className="relative md:mb-60">
           <Suspense>
             <ImageBanner
               title={t('img-title')}
@@ -207,7 +207,7 @@ export default function Page({
                 'back-to-home',
               )}
               tw="md:-mt-[20px] md:h-[441px] bg-center flex w-screen mb-24 justify-center"
-              twTxtBx="w-full 2xl:w-full 2xl:mx-0 md:mt-[64.5vh] text-base block absolute bg-white text-center pt-[24px] pr-[16px] pb-[24px] pl-[16px] z-10 mt-[26rem] mb-20 border-b-[1px] border-black border-solid"
+              twTxtBx="w-full 2xl:w-full 2xl:mx-0 md:mt-[64.5vh] text-base block absolute bg-white text-center pt-[24px] pr-[16px] pb-[24px] pl-[16px] z-10 mt-[26rem] mb-20"
               twTitle="text-lg mb-4"
               twBody="text-5xl font-primary"
               desktopImg="https://static.hiamag.com/styles/1680x729/public/2023-01/Mainp_0.jpg?h=bde28bee&itok=PYdejC5C"
@@ -217,20 +217,24 @@ export default function Page({
             />
           </Suspense>
         </section>
-        <section className="mb-16 text-center ml-20">
+        <section className="!mt-60">
           <Suspense>
             <ImageCarousel
-              width={'100%'}
-              height={'100%'}
-              gap={'3rem'}
-              columns={12}
-              direction="rtl"
               articles={articles_7}
-              twCarouselContainer="col-span-8 p-5"
               title={t('img-title')}
+              width="100%"
+              height="100%"
+              gap="3rem"
+              direction="rtl"
+              twSplideWrapper="hidden md:block col-span-3"
+              twMobileArticlesWrapper="block md:hidden max-w-container px-6 xl:mx-auto mb-24"
+              twArticle="mb-10"
               twArticleImg="w-full overflow-hidden"
               twArticleTitle="text-xl font-primary font-medium text-right mt-4"
               twArticleCategory="mt-4 text-right text-sm font-tertiary"
+              twImageCarouselTitle="text-right font-primary font-bold text-neutral-400 text-5xl lg:text-7xl xl:text-9xl mb-8 md:mb-0"
+              twImageCarouselGrid="md:grid grid-cols-4"
+              twImageCarouselWrapper="relative block mb-[3vh] pr-carousel"
             ></ImageCarousel>
           </Suspense>
         </section>
@@ -423,7 +427,7 @@ export default function Page({
               twMediaBackground="bg-grey-50 py-10 lg:py-24"
               twMediaGridWrapper="xl:container px-6 xl:px-10 xl:mx-auto"
               twMediaTitle="w-full text-right text-5xl lg:text-9xl font-bold font-primary mt-4 md:mt-0 mb-14 text-neutral-800"
-              twMediaItemGrid="grid grid-cols-1 gap-12"
+              twMediaItemGrid="flex grid grid-cols-1 gap-12 md:grid-cols-3"
               twMediaImage="w-full overflow-hidden aspect-square"
               twMediaItemTitle="text-2xl font-primary text-right mt-4"
               twMediaButton="p-2 border border-black flex justify-between w-60 md:w-1/5 font-tertiary"
@@ -445,8 +449,8 @@ export default function Page({
               titleRightAligned
               twArticle=""
               twGridTitle="w-full text-right text-5xl lg:text-6xl xl:text-8xl font-bold font-primary text-neutral-400 mb-8"
-              twArticleGrid="flex-row-reverse grid gap-9 overflow-scroll md:overflow-hidden md:flex-row md:gap-12 max-md:flex"
-              twArticleImg="w-full overflow-hidden"
+              twArticleGrid="flex-row-reverse grid gap-9 overflow-scroll md:overflow-hidden md:flex-row md:gap-12 max-md:flex grid-cols-4"
+              twArticleImg="hidden md:block md:order-2"
               twArticleButtonBx="flex justify-center mt-14"
               twArticleButton="p-2 bg-white border font-tertiary border-black flex justify-between w-60 md:w-1/5"
               twArticleTitle="text-xl font-primary font-medium text-right mt-4"
